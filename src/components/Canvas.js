@@ -1,8 +1,15 @@
-import "../helpers/canvas.scss";
-export default function Canvas() {
-  return (
-    <div>
-      <canvas id="stars" width="300" height="300"></canvas>
-    </div>
-  );
+import React from "react";
+import "../helpers/canvas.css";
+
+//Will hold the canvas component
+export default class Canvas extends React.Component {
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.src = "../helpers/canvas.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+  render() {
+    return <div></div>;
+  }
 }
