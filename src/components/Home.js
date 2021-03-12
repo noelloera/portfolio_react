@@ -2,7 +2,6 @@ import Canvas from "./Canvas.js";
 import useStyles from "../helpers/useStyles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-
 export default function Home() {
   const classes = useStyles();
   return (
@@ -14,21 +13,24 @@ export default function Home() {
             Hi, my name is
           </Typography>
           <Typography
-            style={{ paddingLeft: "0.7rem", fontWeight: "bold" }}
+            style={{ paddingLeft: "0.7rem", fontWeight: "500" }}
             variant="h4"
             color="primary"
           >
             Noel Loera
           </Typography>
           <Typography variant="h4" color="secondary">
-            ,
+            &nbsp;,
           </Typography>
         </div>
-        <Typography variant="h4" color="secondary">
-          I am a Full stack Developer
+        <Typography
+          style={{ paddingBottom: "1.5rem" }}
+          variant="h4"
+          color="secondary"
+        >
+          I am a Full Stack Developer
         </Typography>
         <Button
-          style={{ topPadding: "1rem" }}
           className={classes.homeButton}
           variant="outlined"
           color="primary"

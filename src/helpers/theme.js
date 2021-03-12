@@ -1,4 +1,4 @@
-import { createMuiTheme, createStyles } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core";
 //import desired fonts
 import "typeface-montserrat";
 const defaultTheme = createMuiTheme();

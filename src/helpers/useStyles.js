@@ -8,13 +8,19 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    border: "1px solid red",
+    position: "relative",
   },
   homeTypo: {
     display: "flex",
   },
   homeButton: {
-    topMargin: "1rem",
-    topPadding: "6rem",
+    height: "2.4rem",
+    borderRadius: "0",
+  },
+  navBar: {
+    zIndex: "0",
+    position: "relative",
   },
 });
 
