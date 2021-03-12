@@ -8,8 +8,6 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    border: "1px solid red",
-    position: "relative",
   },
   homeTypo: {
     display: "flex",
@@ -19,8 +17,24 @@ const useStyles = makeStyles({
     borderRadius: "0",
   },
   navBar: {
-    zIndex: "0",
-    position: "relative",
+    overflow: "visible",
+    position: "WebkitSticky",
+    position: "sticky",
+    top: "0",
+    height: "2.7rem",
+  },
+  toolbar: {
+    height: "2.7rem",
+    borderBottom: "3px solid #3ec6de",
+  },
+  link: {
+    fontFamily: "montserrat",
+    ":hover": { color: "#3ec6de" },
+    cursor: "pointer",
+    paddingLeft: "2rem",
+  },
+  about: {
+    height: "200vh",
   },
 });
 

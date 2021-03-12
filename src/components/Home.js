@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 export default function Home() {
   const classes = useStyles();
   return (
-    <div className={classes.home}>
+    <div id="#HOME" className={classes.home}>
       <Canvas />
       <div>
         <div className={classes.homeTypo}>
