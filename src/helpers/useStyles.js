@@ -1,5 +1,4 @@
 import makeStyles from "@material-ui/styles/makeStyles";
-import theme from "./theme.js";
 const useStyles = makeStyles({
   home: {
     height: "100vh",
@@ -17,23 +16,33 @@ const useStyles = makeStyles({
     borderRadius: "0",
   },
   navBar: {
+    width: "100%",
     overflow: "visible",
-    position: "WebkitSticky",
     position: "sticky",
     top: "0",
-    height: "2.7rem",
+    height: "3rem",
+    borderBottom: "3px solid #3ec6de",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   toolbar: {
+    overflow: "hidden",
+    maxWidth: "1200px",
+    textAlign: "left",
+    display: "flex",
     height: "2.7rem",
-    borderBottom: "3px solid #3ec6de",
+    width: "100%",
   },
   link: {
+    position: "initial",
     fontFamily: "montserrat",
     ":hover": { color: "#3ec6de" },
     cursor: "pointer",
     paddingLeft: "2rem",
   },
   about: {
+    background: "#fff",
     height: "200vh",
   },
 });

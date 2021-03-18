@@ -2,10 +2,23 @@ import Canvas from "./Canvas.js";
 import useStyles from "../helpers/useStyles";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { Link, animateScroll } from "react-scroll";
+
 export default function Home() {
   const classes = useStyles();
   return (
-    <div id="#HOME" className={classes.home}>
+    <div
+      id="#HOME"
+      className={classes.home}
+      onKeyPress={(event) => {
+        //Add on enter event that will show the about page
+        console.log(event.key);
+        if (event.key === "Enter") {
+          console.log(event.key);
+          animateScroll.scrollTo(200);
+        }
+      }}
+    >
       <Canvas />
       <div>
         <div className={classes.homeTypo}>
@@ -30,13 +43,15 @@ export default function Home() {
         >
           I am a Full Stack Developer
         </Typography>
-        <Button
-          className={classes.homeButton}
-          variant="outlined"
-          color="primary"
-        >
-          Projects & Contributions
-        </Button>
+        <Link to="#ABOUT" smooth={true}>
+          <Button
+            className={classes.homeButton}
+            variant="outlined"
+            color="primary"
+          >
+            GET STARTED
+          </Button>
+        </Link>
       </div>
     </div>
   );

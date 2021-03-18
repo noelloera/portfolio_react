@@ -10,7 +10,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiToolbar: {
       regular: {
-        minHeight: "32px",
+        minHeight: "3px",
         "@media (min-width: 600px)": {
           minHeight: "0px",
         },
