@@ -1,6 +1,6 @@
 //Variable settings
-var particleCount = 50,
-  flareCount = 9,
+var particleCount = 70,
+  flareCount = 10,
   motion = 0.04,
   tilt = 0.04,
   color = "#FFEED4",

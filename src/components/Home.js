@@ -49,7 +49,7 @@ export default function Home() {
             variant="outlined"
             color="primary"
           >
-            GET STARTED
+            PROCEED
           </Button>
         </Link>
       </div>

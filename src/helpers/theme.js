@@ -8,8 +8,14 @@ const theme = createMuiTheme({
     secondary: { main: "#ffffff", contrastText: "#fff" },
   },
   overrides: {
+    MuiAppBar: {
+      regular: {
+        borderBottom: "none",
+      },
+    },
     MuiToolbar: {
       regular: {
+        borderBottom: "none",
         minHeight: "3px",
         "@media (min-width: 600px)": {
           minHeight: "0px",
@@ -22,7 +28,22 @@ const theme = createMuiTheme({
       fontSize: "2.5rem",
       fontFamily: "Montserrat",
       [defaultTheme.breakpoints.down("md")]: {
-        fontSize: "1.7rem",
+        fontSize: "1.7em",
+      },
+      [defaultTheme.breakpoints.down(380)]: {
+        fontSize: "1.4em",
+      },
+    },
+    //Try refactoring subtitle to use h4 attributes
+    subtitle1: {
+      textDecoration: "underline",
+      fontSize: "2.5rem",
+      fontFamily: "Montserrat",
+      [defaultTheme.breakpoints.down("md")]: {
+        fontSize: "1.7em",
+      },
+      [defaultTheme.breakpoints.down(380)]: {
+        fontSize: "1.4em",
       },
     },
   },
