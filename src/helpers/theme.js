@@ -36,8 +36,8 @@ const theme = createMuiTheme({
     },
     //Try refactoring subtitle to use h4 attributes
     subtitle1: {
-      textDecoration: "underline",
-      fontSize: "2.5rem",
+      fontSize: "2em",
+      fontWeight: "500",
       fontFamily: "Montserrat",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",

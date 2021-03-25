@@ -5,7 +5,22 @@ export default function About() {
   const classes = useStyles();
   return (
     <section id="#ABOUT" className={classes.about}>
-      <Typography variant="subtitle1">ABOUT</Typography>
+      <header>
+        <Typography variant="subtitle1">ABOUT</Typography>
+          </header>
+        
+      <div>
+        <Typography>Responsive</Typography>
+      </div>
+      <div>
+        <Typography>Dynamic</Typography>
+      </div>
+      <div>
+        <Typography>Functional</Typography>
+      </div>
+      <div>
+        <Typography>Efficient</Typography>
+      </div>
     </section>
   );
 }
