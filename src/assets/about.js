@@ -24,3 +24,5 @@ const aboutDescriptions = [
       "Delivery of products and solutions, with an emphasis of stability in mind",
   },
 ];
+
+export default aboutDescriptions;

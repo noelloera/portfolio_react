@@ -1,5 +1,6 @@
 import { Typography } from "@material-ui/core";
 import useStyles from "../helpers/useStyles.js";
+import categories from "../assets/about.js";
 
 export default function About() {
   const classes = useStyles();
@@ -7,19 +8,17 @@ export default function About() {
     <section id="#ABOUT" className={classes.about}>
       <header>
         <Typography variant="subtitle1">ABOUT</Typography>
-          </header>
-        
+      </header>
       <div>
-        <Typography>Responsive</Typography>
-      </div>
-      <div>
-        <Typography>Dynamic</Typography>
-      </div>
-      <div>
-        <Typography>Functional</Typography>
-      </div>
-      <div>
-        <Typography>Efficient</Typography>
+        {categories.map((item, index) => {
+          return (
+            <div>
+              <img alt={item.title} src={item.icon} />
+              <Typography>{item.title}</Typography>
+              <Typography>{item.description}</Typography>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
