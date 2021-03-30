@@ -1,24 +1,65 @@
+import React from "react";
 import { Typography } from "@material-ui/core";
 import useStyles from "../helpers/useStyles.js";
-import categories from "../assets/about.js";
+import { categories, frontTechs, backTechs } from "../assets/about.js";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import Flip from "react-reveal/Flip";
 
 export default function About() {
   const classes = useStyles();
   return (
     <section id="#ABOUT" className={classes.about}>
-      <header>
-        <Typography variant="subtitle1">ABOUT</Typography>
+      <header className={classes.header}>
+        <Fade top>
+          <Typography variant="subtitle1">ABOUT</Typography>
+          <div className={classes.underline}></div>
+        </Fade>
       </header>
-      <div>
-        {categories.map((item, index) => {
+      <div className={classes.categories}>
+        {categories.map(({ id, title, src, description }) => {
           return (
-            <div>
-              <img alt={item.title} src={item.icon} />
-              <Typography>{item.title}</Typography>
-              <Typography>{item.description}</Typography>
-            </div>
+            <Fade left delay={id * 250}>
+              <div key={id} className={classes.category}>
+                <img alt={title} src={src} className={classes.categoryIcon} />
+                <Typography variant="h2">{title}</Typography>
+                <Typography>{description}</Typography>
+              </div>
+            </Fade>
           );
         })}
+      </div>
+      <header className={classes.header}>
+        <Typography variant="subtitle1">TECHNOLOGIES</Typography>
+        <div className={classes.underline}></div>
+      </header>
+      <div className={classes.allTechnologies}>
+        <div className={classes.row}>
+          {frontTechs.map(({ id, title, src }) => {
+            return (
+              <Fade left delay={id * 250}>
+                <div key={id} className={classes.technology}>
+                  <img alt={title} src={src} className={classes.techIcons} />
+                  <Typography>{title}</Typography>
+                </div>
+              </Fade>
+            );
+          })}
+        </div>
+        <div className={classes.underline}></div>
+
+        <div className={classes.row}>
+          {backTechs.map(({ id, title, src }) => {
+            return (
+              <Fade left delay={id * 250}>
+                <div key={id} className={classes.technology}>
+                  <img alt={title} src={src} className={classes.techIcons} />
+                  <Typography>{title}</Typography>
+                </div>
+              </Fade>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

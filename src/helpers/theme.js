@@ -1,6 +1,8 @@
 import { createMuiTheme } from "@material-ui/core";
 //import desired fonts
 import "typeface-montserrat";
+import "typeface-work-sans";
+
 const defaultTheme = createMuiTheme();
 const theme = createMuiTheme({
   palette: {
@@ -24,6 +26,17 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    h2: {
+      fontSize: "1.6rem",
+      fontFamily: "Montserrat",
+      fontWeight: "600",
+      [defaultTheme.breakpoints.down("md")]: {
+        fontSize: "1.3em",
+      },
+      [defaultTheme.breakpoints.down(380)]: {
+        fontSize: "1.4em",
+      },
+    },
     h4: {
       fontSize: "2.5rem",
       fontFamily: "Montserrat",
@@ -37,7 +50,7 @@ const theme = createMuiTheme({
     //Try refactoring subtitle to use h4 attributes
     subtitle1: {
       fontSize: "2em",
-      fontWeight: "500",
+      fontWeight: "700",
       fontFamily: "Montserrat",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",

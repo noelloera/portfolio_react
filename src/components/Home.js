@@ -20,7 +20,7 @@ export default function Home() {
       }}
     >
       <Canvas />
-      <div>
+      <div className={classes.homeText}>
         <div className={classes.homeTypo}>
           <Typography variant="h4" color="secondary">
             Hi, my name is
