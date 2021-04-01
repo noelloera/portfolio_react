@@ -96,37 +96,37 @@ export const frontTechs = [
 ];
 export const backTechs = [
   {
-    id: "9",
+    id: "1",
     title: "Node.JS",
     src: nodejs,
   },
   {
-    id: "10",
+    id: "2",
     title: "Express",
     src: expressjs,
   },
   {
-    id: "11",
+    id: "3",
     title: "MongoDB",
     src: mongodb,
   },
   {
-    id: "12",
+    id: "4",
     title: "MySQL",
     src: mysql,
   },
   {
-    id: "13",
+    id: "5",
     title: "SQLite",
     src: sqlite,
   },
   {
-    id: "14",
+    id: "6",
     title: "Mocha",
     src: mocha,
   },
   {
-    id: "15",
+    id: "7",
     title: "Selenium",
     src: selenium,
   },

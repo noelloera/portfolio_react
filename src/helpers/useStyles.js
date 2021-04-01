@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   homeText: {
     [theme.breakpoints.down("md")]: {
-      paddingBottom: "3rem",
+      paddingBottom: "rem",
     },
   },
   homeTypo: {
@@ -79,7 +79,8 @@ const useStyles = makeStyles({
     margin: "auto",
   },
   header: {
-    padding: "4rem",
+    paddingTop: "2rem",
+    paddingBottom: "2rem",
   },
   categories: {
     margin: "auto",
