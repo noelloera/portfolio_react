@@ -3,16 +3,16 @@ import { Typography } from "@material-ui/core";
 import useStyles from "../helpers/useStyles.js";
 import { categories, frontTechs, backTechs } from "../assets/about.js";
 import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
-import Flip from "react-reveal/Flip";
 
 export default function About() {
   const classes = useStyles();
   return (
     <section id="#ABOUT" className={classes.about}>
       <header className={classes.header}>
-        <Fade top>
+        <Fade left>
           <Typography variant="subtitle1">ABOUT</Typography>
+        </Fade>
+        <Fade left delay="1000">
           <div className={classes.underline}></div>
         </Fade>
       </header>
@@ -30,8 +30,7 @@ export default function About() {
         })}
       </div>
       <header className={classes.header}>
-        <Typography variant="subtitle1">TECHNOLOGIES</Typography>
-        <div className={classes.underline}></div>
+        <Typography variant="h2">TECHNOLOGIES</Typography>
       </header>
       <div className={classes.allTechnologies}>
         <div className={classes.row}>

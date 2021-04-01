@@ -69,18 +69,22 @@ const useStyles = makeStyles({
   //About
   about: {
     background: "#fff",
-    height: "170vh",
+    height: "120vh",
     textAlign: "center",
     margin: "auto",
+    overflow: "scroll",
+    [theme.breakpoints.down("md")]: {
+      height: "150vh",
+    },
   },
   underline: {
     borderBottom: "2px solid black",
-    width: "10rem",
+    width: "7rem",
     margin: "auto",
   },
   header: {
-    paddingTop: "2rem",
-    paddingBottom: "2rem",
+    paddingTop: "3.5rem",
+    paddingBottom: "1.5rem",
   },
   categories: {
     margin: "auto",
@@ -94,7 +98,9 @@ const useStyles = makeStyles({
     width: "170px",
   },
   categoryIcon: {
-    padding: "18px",
+    paddingTop: "10px",
+    width: "90px",
+    padding: "15px",
     background: "#3ec6de",
     borderBottom: "4px solid #ff3697",
   },

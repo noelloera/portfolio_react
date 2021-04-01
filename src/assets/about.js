@@ -27,28 +27,28 @@ export const categories = [
     id: "1",
     title: "Responsive",
     src: responsive,
-    description: "seamless, fast rendering desktop and mobile interfaces",
+    description: "rendering desktop and mobile interfaces",
   },
   {
     id: "2",
     title: "Dynamic",
     src: dynamic,
     description:
-      "products and solutions which adapt to changes, needed for optimum results",
+      "adaptation of client products and solutions",
   },
   {
     id: "3",
     title: "Functional",
     src: functional,
     description:
-      "Integration between views and logic which ensures client expectations ",
+      "integration of reusable views and logic",
   },
   {
     id: "4",
     title: "Efficient",
     src: efficient,
     description:
-      "Delivery of products and solutions, with an emphasis of stability in mind",
+      "delivery focused on stability in mind",
   },
 ];
 
