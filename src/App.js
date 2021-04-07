@@ -3,6 +3,7 @@ import useStyles from "./helpers/useStyles";
 import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   const classes = useStyles();
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Navigation />
       <About />
+      <Portfolio />
     </div>
   );
 }

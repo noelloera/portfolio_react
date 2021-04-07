@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     width: "100%",
     position: "sticky",
     top: "0",
-    height: "3rem",
+    height: "3.5rem",
     borderBottom: "2px solid #3ec6de",
     display: "flex",
     justifyContent: "center",
@@ -67,7 +67,7 @@ const useStyles = makeStyles({
     paddingLeft: "2rem",
   },
   //About
-  about: {
+  section: {
     background: "#fff",
     height: "120vh",
     textAlign: "center",
@@ -83,8 +83,14 @@ const useStyles = makeStyles({
     margin: "auto",
   },
   header: {
-    paddingTop: "3.5rem",
-    paddingBottom: "1.5rem",
+    paddingTop: "3.8rem",
+    paddingBottom: "3rem",
+  },
+  subheader: {
+    padding: "2.3rem 0rem",
+    [theme.breakpoints.down("md")]: {
+      padding: "2rem 0.7rem",
+    },
   },
   categories: {
     margin: "auto",

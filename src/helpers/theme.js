@@ -26,10 +26,9 @@ const theme = createMuiTheme({
     },
   },
   typography: {
+    fontFamily: "Montserrat",
     h2: {
       fontSize: "1.8em",
-      fontFamily: "Montserrat",
-      fontWeight: "600",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.3em",
       },
@@ -39,9 +38,6 @@ const theme = createMuiTheme({
     },
     h4: {
       fontSize: "2.5em",
-      fontWeight: "600",
-
-      fontFamily: "Montserrat",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
       },
@@ -49,11 +45,12 @@ const theme = createMuiTheme({
         fontSize: "1.4em",
       },
     },
+    h6: {
+      fontFamily: "Work Sans",
+    },
     //Try refactoring subtitle to use h4 attributes
     subtitle1: {
       fontSize: "2em",
-      fontWeight: "700",
-      fontFamily: "Montserrat",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
       },

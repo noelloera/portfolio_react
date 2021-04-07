@@ -1,4 +1,4 @@
-import { AppBar, Hidden, Toolbar } from "@material-ui/core";
+import { AppBar, Hidden, Toolbar, Typography } from "@material-ui/core";
 import useStyles from "../helpers/useStyles";
 import { Link } from "react-scroll";
 import MobileDrawer from "./MobileDrawer.js";
@@ -20,7 +20,7 @@ export default function Navigation() {
                 smooth={true}
                 className={classes.link}
               >
-                {name}
+                <Typography variant="h6">{name}</Typography>
               </Link>
             );
           })}
