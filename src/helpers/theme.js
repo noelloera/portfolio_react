@@ -27,17 +27,9 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: "Montserrat",
-    h2: {
-      fontSize: "1.8em",
-      [defaultTheme.breakpoints.down("md")]: {
-        fontSize: "1.3em",
-      },
-      [defaultTheme.breakpoints.down(380)]: {
-        fontSize: "1.4em",
-      },
-    },
-    h4: {
-      fontSize: "2.5em",
+    h1: {
+      fontWeight: "500",
+      fontSize: "2.7em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
       },
@@ -45,17 +37,37 @@ const theme = createMuiTheme({
         fontSize: "1.4em",
       },
     },
-    h6: {
+    h2: {
+      fontWeight: "400",
       fontFamily: "Work Sans",
+      fontSize: "1.3em",
+      [defaultTheme.breakpoints.down("md")]: {
+        fontSize: "1em",
+      },
+      [defaultTheme.breakpoints.down(380)]: {
+        fontSize: ".8em",
+      },
     },
     //Try refactoring subtitle to use h4 attributes
     subtitle1: {
-      fontSize: "2em",
+      fontWeight: "600",
+      fontSize: "1.8em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
       },
       [defaultTheme.breakpoints.down(380)]: {
         fontSize: "1.4em",
+      },
+    },
+    subtitle2: {
+      fontWeight: "300",
+      fontFamily: "Work Sans",
+      fontSize: "1.15em",
+      [defaultTheme.breakpoints.down("md")]: {
+        fontSize: "1em",
+      },
+      [defaultTheme.breakpoints.down(380)]: {
+        fontSize: "0.8em",
       },
     },
   },

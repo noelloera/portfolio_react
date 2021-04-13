@@ -27,7 +27,7 @@ export const categories = [
     id: "1",
     title: "Responsive",
     src: responsive,
-    description: "rendering desktop and mobile interfaces",
+    description: "rendering of desktop and mobile interfaces",
   },
   {
     id: "2",

@@ -20,7 +20,7 @@ export default function Navigation() {
                 smooth={true}
                 className={classes.link}
               >
-                <Typography variant="h6">{name}</Typography>
+                <Typography variant="h2">{name}</Typography>
               </Link>
             );
           })}

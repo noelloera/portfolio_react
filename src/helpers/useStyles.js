@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   homeText: {
     [theme.breakpoints.down("md")]: {
-      paddingBottom: "rem",
+      paddingBottom: "4.5rem",
     },
   },
   homeTypo: {
@@ -27,7 +27,6 @@ const useStyles = makeStyles({
     position: "sticky",
     top: "0",
     height: "3.5rem",
-    borderBottom: "2px solid #3ec6de",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -64,7 +63,7 @@ const useStyles = makeStyles({
     fontWeight: "500",
     "&:hover": { color: "#3ec6de" },
     cursor: "pointer",
-    paddingLeft: "2rem",
+    paddingLeft: "2.3rem",
   },
   //About
   section: {
@@ -83,14 +82,12 @@ const useStyles = makeStyles({
     margin: "auto",
   },
   header: {
-    paddingTop: "3.8rem",
-    paddingBottom: "3rem",
+    paddingTop: "4rem",
+    paddingBottom: "4rem",
   },
   subheader: {
-    padding: "2.3rem 0rem",
-    [theme.breakpoints.down("md")]: {
-      padding: "2rem 0.7rem",
-    },
+    paddingTop: "2.5rem",
+    padding: "1rem",
   },
   categories: {
     margin: "auto",
@@ -105,16 +102,18 @@ const useStyles = makeStyles({
   },
   categoryIcon: {
     paddingTop: "10px",
-    width: "90px",
+    width: "80px",
     padding: "15px",
     background: "#3ec6de",
     borderBottom: "4px solid #ff3697",
   },
   //techIcons
-  techIcons: {
-    width: "100%",
+  allTechnologies: {
+    paddingTop: "4.5rem",
+    [theme.breakpoints.down("md")]: {
+      paddingTop: "12.5rem",
+    },
   },
-
   row: {
     display: "flex",
     flexDirection: "row",
@@ -125,12 +124,19 @@ const useStyles = makeStyles({
   },
   technology: {
     width: "4rem",
-    height: "5rem",
+    height: "4rem",
     textAlign: "center",
     margin: "1rem",
-    marginBottom: "2rem",
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.down("md")]: {
+      width: "2rem",
+      height: "2rem",
+      margin: "0.5rem",
+    },
+  },
+  techIcons: {
+    width: "100%",
   },
 });
 
