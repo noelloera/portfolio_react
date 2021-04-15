@@ -30,6 +30,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    borderBottom: "4px solid #3ec6de",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       margin: "auto",
@@ -40,11 +41,12 @@ const useStyles = makeStyles({
     },
   },
   mobileDrawer: {
-    background: "rgba(255, 54, 151, 0.4)",
+    background: "rgba(255, 54, 151, 0.6)",
+    borderBottom: "2px solid #3ec6de",
   },
   //Mobile Drawer
   paper: {
-    background: "rgba(255, 54, 151, 0.8)",
+    background: "rgba(255, 54, 151, 0.95)",
     color: "white",
     borderBottom: "2px solid #3ec6de",
   },
@@ -78,7 +80,7 @@ const useStyles = makeStyles({
   },
   underline: {
     borderBottom: "2px solid black",
-    width: "7rem",
+    width: "6rem",
     margin: "auto",
   },
   header: {
@@ -105,13 +107,13 @@ const useStyles = makeStyles({
     width: "80px",
     padding: "15px",
     background: "#3ec6de",
-    borderBottom: "4px solid #ff3697",
+    //borderBottom: "4px solid #ff3697",
   },
   //techIcons
   allTechnologies: {
     paddingTop: "4.5rem",
     [theme.breakpoints.down("md")]: {
-      paddingTop: "12.5rem",
+      paddingTop: "3rem",
     },
   },
   row: {

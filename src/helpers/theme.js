@@ -28,7 +28,7 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "Montserrat",
     h1: {
-      fontWeight: "500",
+      fontWeight: "400",
       fontSize: "2.7em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
@@ -38,9 +38,9 @@ const theme = createMuiTheme({
       },
     },
     h2: {
-      fontWeight: "400",
+      fontWeight: "500",
       fontFamily: "Work Sans",
-      fontSize: "1.3em",
+      fontSize: "1.2em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1em",
       },
