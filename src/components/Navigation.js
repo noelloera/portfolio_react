@@ -15,6 +15,7 @@ export default function Navigation() {
           {["HOME", "ABOUT", "PORTFOLIO", "CONTACT"].map((name, i) => {
             return (
               <Link
+                duration={400}
                 key={i}
                 to={"#" + name}
                 smooth={true}

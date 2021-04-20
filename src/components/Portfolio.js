@@ -16,6 +16,9 @@ export default function Portfolio() {
             <div className={classes.underline}></div>
           </Fade>
         </header>
+        <div>
+        </div>
       </section>
     );
 }
+/*Will contain a mapping of multiple "Tiles.js" which will have their own database of recieving data*/

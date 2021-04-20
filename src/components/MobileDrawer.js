@@ -27,7 +27,12 @@ export default function MobileDrawer() {
     >
       <List>
         {["HOME", "ABOUT", "PORTFOLIO", "CONTACT"].map((text, i) => (
-          <Link to={`#${text}`} smooth onClick={toggleDrawer("top", false)}>
+          <Link
+            to={`#${text}`}
+            smooth
+            duration={400}
+            onClick={toggleDrawer("top", false)}
+          >
             <ListItem
               primary={text}
               key={text}
@@ -44,7 +49,7 @@ export default function MobileDrawer() {
   return (
     <div className={classes.mobileDrawer}>
       <IconButton onClick={toggleDrawer("top", true)}>
-        <MenuSharpIcon color="secondary"  />
+        <MenuSharpIcon color="secondary" />
       </IconButton>
       <Drawer
         classes={{ paper: classes.paper }}

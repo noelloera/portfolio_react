@@ -71,11 +71,12 @@ const useStyles = makeStyles({
   section: {
     background: "#fff",
     height: "120vh",
+    maxHeight: "1280px",
     textAlign: "center",
     margin: "auto",
-    overflow: "scroll",
+    overflow: "hidden",
     [theme.breakpoints.down("md")]: {
-      height: "150vh",
+      height: "130vh",
     },
   },
   underline: {
@@ -84,8 +85,11 @@ const useStyles = makeStyles({
     margin: "auto",
   },
   header: {
-    paddingTop: "4rem",
+    paddingTop: "5.4rem",
     paddingBottom: "4rem",
+    [theme.breakpoints.down("md")]: {
+      paddingTop: "4rem",
+    },
   },
   subheader: {
     paddingTop: "2.5rem",
@@ -117,6 +121,9 @@ const useStyles = makeStyles({
     },
   },
   row: {
+    overflow: "hidden",
+    margin: "auto",
+    width: "90%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -132,8 +139,8 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("md")]: {
-      width: "2rem",
-      height: "2rem",
+      width: "4rem",
+      height: "4rem",
       margin: "0.5rem",
     },
   },

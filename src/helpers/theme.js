@@ -38,7 +38,7 @@ const theme = createMuiTheme({
       },
     },
     h2: {
-      fontWeight: "500",
+      fontWeight: "400",
       fontFamily: "Work Sans",
       fontSize: "1.2em",
       [defaultTheme.breakpoints.down("md")]: {

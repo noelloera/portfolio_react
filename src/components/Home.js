@@ -18,15 +18,13 @@ export default function Home() {
             <Typography variant="h1" color="primary">
               Noel Loera
             </Typography>
-            <Typography variant="h1" color="secondary">
-              
-            </Typography>
+            <Typography variant="h1" color="secondary"></Typography>
           </div>
           <Typography variant="h1" color="secondary">
             I'm a Full Stack Developer
           </Typography>
         </Box>
-        <Link to="#ABOUT" smooth={true}>
+        <Link to="#ABOUT" smooth={true} duration={400}>
           <Button
             className={classes.homeButton}
             variant="outlined"
