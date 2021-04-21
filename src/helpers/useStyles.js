@@ -65,7 +65,7 @@ const useStyles = makeStyles({
     fontWeight: "500",
     "&:hover": { color: "#3ec6de" },
     cursor: "pointer",
-    paddingLeft: "2.3rem",
+    paddingLeft: "2.6rem",
   },
   //About
   section: {
@@ -88,7 +88,7 @@ const useStyles = makeStyles({
     paddingTop: "5.4rem",
     paddingBottom: "4rem",
     [theme.breakpoints.down("md")]: {
-      paddingTop: "4rem",
+      paddingTop: "5rem",
     },
   },
   subheader: {
@@ -139,7 +139,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("md")]: {
-      width: "4rem",
+      width: "3.5rem",
       height: "4rem",
       margin: "0.5rem",
     },

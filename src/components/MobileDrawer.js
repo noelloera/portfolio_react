@@ -1,4 +1,10 @@
-import { IconButton, List, ListItem, Divider } from "@material-ui/core";
+import {
+  IconButton,
+  List,
+  ListItem,
+  Divider,
+  Typography,
+} from "@material-ui/core";
 import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import { Link } from "react-scroll";
@@ -38,7 +44,7 @@ export default function MobileDrawer() {
               key={text}
               className={classes.drawerListItem}
             >
-              {text}
+              <Typography variant="h2">{text}</Typography>
             </ListItem>
             {i < 3 ? <Divider /> : null}
           </Link>
