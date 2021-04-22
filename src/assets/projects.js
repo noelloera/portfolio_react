@@ -11,6 +11,7 @@ export const projects = [
       description: "Grocery List Application",
       fullDescription:
         "Groceries is a free item and item list storing app that allows users to never forget to buy the things they need with access to their lists and items from anywhere.",
+      src: [],
       url: "",
       gitUrl: "",
     },
@@ -18,52 +19,105 @@ export const projects = [
   {
     id: "2",
     name: "Starvin",
-    src: dynamic,
-    description: "Local Restaurant Search",
-    fullDescription:
-      "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
-    modal: {},
+    src: "starvin picture",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "3",
     name: "Quote Keeps",
-    src: functional,
-    description: "integration of reusable views and logic",
+    src: "quote keeps picture",
+    modal: {
+      description: "Favorite Quote Storing Application",
+      fullDescription:
+        "Quote Keeps is a free app that allows users to login and add or edit their favorite stored quotes",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "4",
     name: "Login",
-    src: efficient,
-    description: "delivery focused on stability in mind",
+    src: "Login picture",
+    modal: {
+      description: "Login is a ",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "5",
     name: "Authenticate",
-    src: responsive,
-    description: "rendering of desktop and mobile interfaces",
+    src: "starvin picture",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "6",
     name: "PlaylistMakr",
-    src: dynamic,
-    description: "adaptation of client products and solutions",
+    src: "starvin picture",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "7",
     name: "Wanderlist",
     src: functional,
-    description: "integration of reusable views and logic",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "8",
     name: "Alien or Chore",
     src: efficient,
-    description: "delivery focused on stability in mind",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
   {
     id: "9",
     name: "TV Pro Install",
     src: efficient,
-    description: "delivery focused on stability in mind",
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
   },
 ];
