@@ -70,7 +70,7 @@ const useStyles = makeStyles({
   //About
   section: {
     background: "#fff",
-    height: "120vh",
+    height: "110vh",
     maxHeight: "1280px",
     textAlign: "center",
     margin: "auto",

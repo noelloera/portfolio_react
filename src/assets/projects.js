@@ -47,7 +47,7 @@ export const projects = [
     name: "Login",
     src: "Login picture",
     modal: {
-      description: "Login is a ",
+      description: "Login React Template",
       fullDescription:
         "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
       src: [],
@@ -58,9 +58,9 @@ export const projects = [
   {
     id: "5",
     name: "Authenticate",
-    src: "starvin picture",
+    src: "Authenticate picture",
     modal: {
-      description: "Local Restaurant Search",
+      description: "JWT Authentication Server",
       fullDescription:
         "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
       src: [],
@@ -73,9 +73,10 @@ export const projects = [
     name: "PlaylistMakr",
     src: "starvin picture",
     modal: {
-      description: "Local Restaurant Search",
+      description:
+        "Spotify Playlist Management Application",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Application which allows you to add, delete, and edit Spotify playlists",
       src: [],
       url: "",
       gitUrl: "",
