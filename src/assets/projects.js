@@ -49,7 +49,7 @@ export const projects = [
     modal: {
       description: "Login React Template",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Reusable front-end React and Material UI Login Template. Can be easily modified to change design",
       src: [],
       url: "",
       gitUrl: "",
@@ -62,7 +62,7 @@ export const projects = [
     modal: {
       description: "JWT Authentication Server",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Reusable back-end Express.js and MongoDB server which uses JWT (JSON Web Token) encoding for user credentials.",
       src: [],
       url: "",
       gitUrl: "",
@@ -73,8 +73,7 @@ export const projects = [
     name: "PlaylistMakr",
     src: "starvin picture",
     modal: {
-      description:
-        "Spotify Playlist Management Application",
+      description: "Spotify Playlist Management Application",
       fullDescription:
         "Application which allows you to add, delete, and edit Spotify playlists",
       src: [],
@@ -87,9 +86,9 @@ export const projects = [
     name: "Wanderlist",
     src: functional,
     modal: {
-      description: "Local Restaurant Search",
+      description: "Travel Planning Application",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Displays useful travel information when inputing what travel destination is specified.",
       src: [],
       url: "",
       gitUrl: "",
@@ -97,12 +96,12 @@ export const projects = [
   },
   {
     id: "8",
-    name: "Alien or Chore",
+    name: "Aliens or Chores",
     src: efficient,
     modal: {
-      description: "Local Restaurant Search",
+      description: "Guessing Game",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Guessing game that randomizes what is behind each door and upon click reveals if the user won and guessed where the alien is or if they failed and got a chore instead.",
       src: [],
       url: "",
       gitUrl: "",
@@ -113,9 +112,9 @@ export const projects = [
     name: "TV Pro Install",
     src: efficient,
     modal: {
-      description: "Local Restaurant Search",
+      description: "Home Theater Installation Business",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "El Paso, TX based business which offers professional Home Theater installation.",
       src: [],
       url: "",
       gitUrl: "",
