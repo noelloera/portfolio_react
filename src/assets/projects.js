@@ -83,6 +83,19 @@ export const projects = [
   },
   {
     id: "7",
+    name: "TV Pro Install",
+    src: efficient,
+    modal: {
+      description: "Home Theater Installation Business",
+      fullDescription:
+        "El Paso, TX based business which offers professional Home Theater installation.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
+  },
+  {
+    id: "8",
     name: "Wanderlist",
     src: functional,
     modal: {
@@ -95,26 +108,13 @@ export const projects = [
     },
   },
   {
-    id: "8",
-    name: "Aliens or Chores",
+    id: "9",
+    name: "Grand Prize Door",
     src: efficient,
     modal: {
       description: "Guessing Game",
       fullDescription:
-        "Guessing game that randomizes what is behind each door and upon click reveals if the user won and guessed where the alien is or if they failed and got a chore instead.",
-      src: [],
-      url: "",
-      gitUrl: "",
-    },
-  },
-  {
-    id: "9",
-    name: "TV Pro Install",
-    src: efficient,
-    modal: {
-      description: "Home Theater Installation Business",
-      fullDescription:
-        "El Paso, TX based business which offers professional Home Theater installation.",
+        "Behind one of these doors is a trick door which ends the game. Guess which 2 of the 3 doors are real doors to win.",
       src: [],
       url: "",
       gitUrl: "",
