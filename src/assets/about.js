@@ -1,4 +1,4 @@
-//icon png imports
+//icon png import
 import responsive from "./../assets/images/responsive.png";
 import dynamic from "./../assets/images/dynamic.png";
 import functional from "./../assets/images/functional.png";
@@ -33,22 +33,19 @@ export const categories = [
     id: "2",
     title: "Dynamic",
     src: dynamic,
-    description:
-      "adaptation of client products and solutions",
+    description: "adaptation of client products and solutions",
   },
   {
     id: "3",
     title: "Functional",
     src: functional,
-    description:
-      "integration of reusable views and logic",
+    description: "integration of reusable views and logic",
   },
   {
     id: "4",
     title: "Efficient",
     src: efficient,
-    description:
-      "delivery focused on stability in mind",
+    description: "delivery focused on stability in mind",
   },
 ];
 

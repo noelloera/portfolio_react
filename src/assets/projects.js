@@ -1,6 +1,5 @@
 //create renering of app on stock photos
-import frontTechs from "./about";
-import backTechs from "./about";
+import { frontTechs, backTechs } from "./about.js";
 export const projects = [
   {
     id: "1",
@@ -20,6 +19,7 @@ export const projects = [
     id: "2",
     name: "Starvin",
     src: "starvin picture",
+    technologies: [frontTechs[5], frontTechs[2]],
     modal: {
       description: "Local Restaurant Search",
       fullDescription:
@@ -33,6 +33,13 @@ export const projects = [
     id: "3",
     name: "Quote Keeps",
     src: "quote keeps picture",
+    technologies: [
+      frontTechs[0],
+      frontTechs[1],
+      frontTechs[2],
+      backTechs[1],
+      backTechs[2],
+    ],
     modal: {
       description: "Favorite Quote Storing Application",
       fullDescription:
@@ -46,6 +53,7 @@ export const projects = [
     id: "4",
     name: "Login",
     src: "Login picture",
+    technologies: [frontTechs[5], frontTechs[6]],
     modal: {
       description: "Login React Template",
       fullDescription:
@@ -59,6 +67,7 @@ export const projects = [
     id: "5",
     name: "Authenticate",
     src: "Authenticate picture",
+    technologies: [backTechs[0], backTechs[1], backTechs[2]],
     modal: {
       description: "JWT Authentication Server",
       fullDescription:
@@ -72,6 +81,7 @@ export const projects = [
     id: "6",
     name: "PlaylistMakr",
     src: "starvin picture",
+    technologies: [frontEnd[0], frontEnd[1], frontEnd[2]],
     modal: {
       description: "Spotify Playlist Management Application",
       fullDescription:
@@ -84,7 +94,8 @@ export const projects = [
   {
     id: "7",
     name: "TV Pro Install",
-    src: efficient,
+    src: "",
+    technologies: [frontTechs[5], frontTechs[6], backTechs[0]],
     modal: {
       description: "Home Theater Installation Business",
       fullDescription:
@@ -97,7 +108,8 @@ export const projects = [
   {
     id: "8",
     name: "Wanderlist",
-    src: functional,
+    src: "",
+    technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
     modal: {
       description: "Travel Planning Application",
       fullDescription:
@@ -110,7 +122,8 @@ export const projects = [
   {
     id: "9",
     name: "Grand Prize Door",
-    src: efficient,
+    src: "",
+    technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
     modal: {
       description: "Guessing Game",
       fullDescription:
