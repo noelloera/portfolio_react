@@ -30,37 +30,39 @@ export default function About() {
           );
         })}
       </div>
-      <div className={classes.allTechnologies}>
-        <div className={classes.row}>
-          {frontTechs.map(({ id, title, src }) => {
-            return (
-              <Fade delay={[theme.breakpoints.down("md")] ? 0 : 2500}>
-                <div key={id} className={classes.technology}>
-                  <img alt={title} src={src} className={classes.techIcons} />
-                  <Hidden smDown>
-                    <Typography>{title}</Typography>
-                  </Hidden>
-                </div>
-              </Fade>
-            );
-          })}
+      <Fade delay={3000}>
+        <div className={classes.allTechnologies}>
+          <div className={classes.row}>
+            {frontTechs.map(({ id, title, src }) => {
+              return (
+                <Fade delay={[theme.breakpoints.down("md")] ? 0 : 2500}>
+                  <div key={id} className={classes.technology}>
+                    <img alt={title} src={src} className={classes.techIcons} />
+                    <Hidden smDown>
+                      <Typography>{title}</Typography>
+                    </Hidden>
+                  </div>
+                </Fade>
+              );
+            })}
+          </div>
+          <div className={classes.underline}></div>
+          <div className={classes.row}>
+            {backTechs.map(({ id, title, src }) => {
+              return (
+                <Fade delay={[theme.breakpoints.down("md")] ? 0 : 2500}>
+                  <div key={id} className={classes.technology}>
+                    <img alt={title} src={src} className={classes.techIcons} />
+                    <Hidden smDown>
+                      <Typography>{title}</Typography>
+                    </Hidden>
+                  </div>
+                </Fade>
+              );
+            })}
+          </div>
         </div>
-        <div className={classes.underline}></div>
-        <div className={classes.row}>
-          {backTechs.map(({ id, title, src }) => {
-            return (
-              <Fade delay={[theme.breakpoints.down("md")] ? 0 : 2500}>
-                <div key={id} className={classes.technology}>
-                  <img alt={title} src={src} className={classes.techIcons} />
-                  <Hidden smDown>
-                    <Typography>{title}</Typography>
-                  </Hidden>
-                </div>
-              </Fade>
-            );
-          })}
-        </div>
-      </div>
+      </Fade>
     </section>
   );
 }

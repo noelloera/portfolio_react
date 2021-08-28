@@ -1,5 +1,5 @@
 //Variable settings
-var particleCount = 80,
+var particleCount = 95,
   flareCount = 10,
   motion = 0.04,
   tilt = 0.04,
@@ -360,32 +360,6 @@ function init() {
     for (i = 0; i < flareCount; i++) {
       flares.push(new Flare());
     }
-  }
-
-  // Motion mode
-  //if (Modernizr && Modernizr.deviceorientation) {
-  if (
-    "ontouchstart" in document.documentElement &&
-    window.DeviceOrientationEvent
-  ) {
-    window.addEventListener(
-      "deviceorientation",
-      function (e) {
-        mouse.x =
-          canvas.clientWidth / 2 -
-          (e.gamma / 90) * (canvas.clientWidth / 2) * 2;
-        mouse.y =
-          canvas.clientHeight / 2 -
-          (e.beta / 90) * (canvas.clientHeight / 2) * 2;
-      },
-      true
-    );
-  } else {
-    // Mouse move listener
-    document.body.addEventListener("mousemove", function (e) {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    });
   }
 
   // Animation loop

@@ -71,7 +71,7 @@ const useStyles = makeStyles({
   section: {
     background: "#fff",
     height: "110vh",
-    maxHeight: "1280px",
+    maxHeight: "1100px",
     textAlign: "center",
     margin: "auto",
     overflow: "hidden",
@@ -146,6 +146,20 @@ const useStyles = makeStyles({
   },
   techIcons: {
     width: "100%",
+  },
+  //PORTFOLIO
+  projectContainer: {
+    backgroundColor: "gray",
+    maxWidth: "1200px",
+    margin: "auto",
+    height: "600px",
+  },
+  projectModals: {
+    height: "250px",
+  },
+  coverImage: {
+    height: "200px",
+    width: "100px",
   },
 });
 
