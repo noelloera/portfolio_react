@@ -2,9 +2,29 @@ import { Grid, Typography, Paper } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import useStyles from "../helpers/useStyles";
 import ProjectModal from "./ProjectModal";
-
+import { projects } from "../assets/projects.js";
 export default function Portfolio() {
   const classes = useStyles();
+  const renderedModals = () => {
+    return projects.map((project) => {
+      return (
+        <Grid item xs={4}>
+          <Paper className={classes.projectModals}>
+            <ProjectModal
+              coverSrc={project.src}
+              name={project.name}
+              technologies={project.technologies}
+              description={project.modal.description}
+              fullDescription={project.modal.fullDescription}
+              modalSrcs={project.modal.srcs}
+              url={project.modal.url}
+              gitUrl={project.modal.gitUrl}
+            />
+          </Paper>
+        </Grid>
+      );
+    });
+  };
   return (
     <section
       id="#PORTFOLIO"
@@ -25,49 +45,7 @@ export default function Portfolio() {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>
-                <ProjectModal />
-              </Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
-            <Grid item xs={4}>
-              <Paper className={classes.projectModals}>project1</Paper>
-            </Grid>
+            {renderedModals()}
           </Grid>
         </div>
       </Fade>

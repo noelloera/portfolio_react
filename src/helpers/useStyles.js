@@ -1,5 +1,6 @@
 import makeStyles from "@material-ui/styles/makeStyles";
 import theme from "./theme.js";
+const contrastColor = "#00b0c7";
 const useStyles = makeStyles({
   //Home
   home: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderBottom: "4px solid #3ec6de",
+    borderBottom: "4px solid " + contrastColor,
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       margin: "auto",
@@ -42,13 +43,13 @@ const useStyles = makeStyles({
   },
   mobileDrawer: {
     background: "rgba(255, 54, 151, 0.6)",
-    borderBottom: "2px solid #3ec6de",
+    borderBottom: "2px solid " + contrastColor,
   },
   //Mobile Drawer
   paper: {
     background: "rgba(255, 54, 151, 0.95)",
     color: "white",
-    borderBottom: "2px solid #3ec6de",
+    borderBottom: "2px solid " + contrastColor,
   },
   drawerListItem: {
     height: "3em",
@@ -63,7 +64,7 @@ const useStyles = makeStyles({
     position: "initial",
     fontFamily: "montserrat",
     fontWeight: "500",
-    "&:hover": { color: "#3ec6de" },
+    "&:hover": { color: contrastColor },
     cursor: "pointer",
     paddingLeft: "2.6rem",
   },
@@ -110,7 +111,7 @@ const useStyles = makeStyles({
     paddingTop: "10px",
     width: "80px",
     padding: "15px",
-    background: "#3ec6de",
+    background: contrastColor,
     //borderBottom: "4px solid #ff3697",
   },
   //techIcons

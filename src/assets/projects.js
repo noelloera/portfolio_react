@@ -1,16 +1,18 @@
 //create renering of app on stock photos
 import { frontTechs, backTechs } from "./about.js";
+import grocerylistscover from "../assets/images/grocerylistscover.png";
+import starvincover from "../assets/images/starvincover.png";
 export const projects = [
   {
     id: "1",
-    name: "Groceries",
-    src: "groceries picture",
+    name: "Grocery Lists",
+    src: grocerylistscover,
     technologies: [frontTechs[5], frontTechs[2], backTechs[1], backTechs[2]],
     modal: {
       description: "Grocery List Application",
       fullDescription:
         "Groceries is a free item and item list storing app that allows users to never forget to buy the things they need with access to their lists and items from anywhere.",
-      src: [],
+      srcs: [],
       url: "",
       gitUrl: "",
     },
@@ -18,7 +20,7 @@ export const projects = [
   {
     id: "2",
     name: "Starvin",
-    src: "starvin picture",
+    src: starvincover,
     technologies: [frontTechs[5], frontTechs[2]],
     modal: {
       description: "Local Restaurant Search",
@@ -81,7 +83,7 @@ export const projects = [
     id: "6",
     name: "PlaylistMakr",
     src: "starvin picture",
-    technologies: [frontEnd[0], frontEnd[1], frontEnd[2]],
+    technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
     modal: {
       description: "Spotify Playlist Management Application",
       fullDescription:

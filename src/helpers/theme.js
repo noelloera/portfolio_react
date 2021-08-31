@@ -6,7 +6,7 @@ import "typeface-work-sans";
 const defaultTheme = createMuiTheme();
 const theme = createMuiTheme({
   palette: {
-    primary: { main: "#ff3697", contrastText: "#fff" },
+    primary: { main: "#e31b86", contrastText: "#fff" },
     secondary: { main: "#ffffff", contrastText: "#fff" },
   },
   overrides: {
