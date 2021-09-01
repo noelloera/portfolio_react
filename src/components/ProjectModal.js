@@ -1,8 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
-import { Modal, Grid, Typography } from "@material-ui/core";
+import { Modal, Grid, Typography, Button } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
+  onHover: {
+    height: "100%",
+  },
   allTechnologies: {
     display: "flex",
     justifyContent: "center",
@@ -11,12 +14,20 @@ const useStyles = makeStyles((theme) => ({
     height: "1em",
     padding: "1em",
   },
+  coverContainer: {
+    height: "300px",
+  },
   coverImage: {
-    width: "400px",
+    height: "auto",
+    maxWidth: "100%",
   },
   modalPreview: {
     height: "200px",
     width: "100%",
+  },
+  modalImage: {
+    maxWidth: "100%",
+    height: "auto",
   },
   paper: {
     position: "absolute",
@@ -30,9 +41,6 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 10,
     outline: 0,
     height: "90%",
-  },
-  modalImages: {
-    width: "100%",
   },
 }));
 
@@ -53,10 +61,10 @@ export default function SimpleModal(props) {
   const body = (
     <Grid container className={classes.paper} direction="column" xs={12}>
       <Grid item>
-        <img className={classes.modalImages} src={props.coverSrc} />
+        <img className={classes.modalImage} src={props.coverSrc} />
       </Grid>
       <Grid item>
-        <Typography variant="h1" id="simple-modal-title">
+        <Typography variant="subtitle1" id="simple-modal-title">
           {props.name}
         </Typography>
         <Typography>{props.fullDescription}</Typography>
@@ -69,36 +77,48 @@ export default function SimpleModal(props) {
             );
           })}
         </div>
+        <Button>Site</Button>
+        <Button>Code</Button>
       </Grid>
     </Grid>
   );
 
   const onHover = (
-    <div>
+    <Grid xs={12} itemclassName={classes.onHover}>
       <Fade>
-        <Typography variant="h2" color="primary">
-          {props.name}
-        </Typography>
-        <Typography>{props.description}</Typography>
-        <div className={classes.allTechnologies}>
-          {props.technologies.map((technology) => {
-            return (
-              <img className={classes.technologies} src={technology.src}></img>
-            );
-          })}
-        </div>
+        <Grid container justifyContent="center" alignItems="center">
+          <Grid item xs={12}>
+            <Typography variant="h2" color="primary">
+              {props.name}
+            </Typography>
+            <Typography>{props.description}</Typography>
+            <div className={classes.allTechnologies}>
+              {props.technologies.map((technology) => {
+                return (
+                  <img
+                    className={classes.technologies}
+                    src={technology.src}
+                  ></img>
+                );
+              })}
+            </div>
+          </Grid>
+        </Grid>
       </Fade>
-    </div>
+    </Grid>
   );
   const onLeave = (
-    <div>
+    <div className={classes.coverContainer}>
       <img src={props.coverSrc} className={classes.coverImage}></img>
     </div>
   );
 
   return (
     <div>
-      <div
+      <Grid
+        container
+        justifyContent="center"
+        alignContent="center"
         className={classes.modalPreview}
         type="button"
         onClick={handleOpen}
@@ -110,7 +130,7 @@ export default function SimpleModal(props) {
         }}
       >
         {hovered ? onHover : onLeave}
-      </div>
+      </Grid>
       <Modal
         open={open}
         onClose={handleClose}

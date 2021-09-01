@@ -149,18 +149,28 @@ const useStyles = makeStyles({
     width: "100%",
   },
   //PORTFOLIO
+  portfolioSection: {
+    background: "#fff",
+    height: "180vh",
+    textAlign: "center",
+    margin: "auto",
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      height: "370vh",
+    },
+  },
   projectContainer: {
     backgroundColor: "gray",
     maxWidth: "1200px",
     margin: "auto",
-    height: "600px",
+    height: "900px",
   },
   projectModals: {
-    height: "250px",
+    height: "300px",
+    cursor: "pointer",
   },
   coverImage: {
-    height: "200px",
-    width: "100px",
+    height: "300px",
   },
 });
 

@@ -8,7 +8,7 @@ export default function Portfolio() {
   const renderedModals = () => {
     return projects.map((project) => {
       return (
-        <Grid item xs={4}>
+        <Grid item xs={12} md={4}>
           <Paper className={classes.projectModals}>
             <ProjectModal
               coverSrc={project.src}
@@ -18,7 +18,7 @@ export default function Portfolio() {
               fullDescription={project.modal.fullDescription}
               modalSrcs={project.modal.srcs}
               url={project.modal.url}
-              gitUrl={project.modal.gitUrl}
+              gitUrl={project.modal.git}
             />
           </Paper>
         </Grid>
@@ -28,7 +28,7 @@ export default function Portfolio() {
   return (
     <section
       id="#PORTFOLIO"
-      className={classes.section}
+      className={classes.portfolioSection}
       style={{ background: "#ebebeb" }}
     >
       <header className={classes.header}>
@@ -37,7 +37,7 @@ export default function Portfolio() {
           <div className={classes.underline}></div>
         </Fade>
       </header>
-      <Fade delay={1500}>
+      <Fade>
         <div className={classes.projectContainer}>
           <Grid
             container
