@@ -1,7 +1,6 @@
-import makeStyles from "@material-ui/styles/makeStyles";
-import theme from "./theme.js";
+import theme from "./theme";
 const contrastColor = "#00b0c7";
-const useStyles = makeStyles({
+const useStyles = () => ({
   //Home
   home: {
     height: "100vh",
@@ -156,21 +155,61 @@ const useStyles = makeStyles({
     margin: "auto",
     overflow: "hidden",
     [theme.breakpoints.down("md")]: {
-      height: "370vh",
+      height: "300vh",
     },
   },
   projectContainer: {
-    backgroundColor: "gray",
+    backgroundColor: "lightgray",
     maxWidth: "1200px",
     margin: "auto",
-    height: "900px",
   },
-  projectModals: {
-    height: "300px",
+  //Project
+  projectPreview: {
+    height: "250px",
+    overflow: "hidden",
     cursor: "pointer",
+    textAlign: "center",
+  },
+  projectCoverImage: {
+    maxWidth: "100%",
+    height: "auto",
+  },
+
+  modalPreviewTechnologies: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  technologies: {
+    height: "1em",
+    padding: "1em",
+  },
+  coverContainer: {
+    height: "300px",
   },
   coverImage: {
-    height: "300px",
+    height: "auto",
+    maxWidth: "100%",
+  },
+  modalPreview: {
+    height: "200px",
+    width: "100%",
+  },
+  modalImage: {
+    maxWidth: "100%",
+    height: "auto",
+  },
+  modal: {
+    position: "absolute",
+    width: "700px",
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: theme.shadows[10],
+    padding: theme.spacing(2, 4, 3),
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: 10,
+    outline: 0,
+    height: "90%",
   },
 });
 

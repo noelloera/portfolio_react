@@ -1,10 +1,12 @@
 import { AppBar, Hidden, Toolbar, Typography } from "@material-ui/core";
-import useStyles from "../helpers/useStyles";
 import { Link } from "react-scroll";
 import MobileDrawer from "./MobileDrawer.js";
-
-export default function Navigation() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const Navigation = (props) => {
+  const { classes } = props;
   return (
     <AppBar elevation={0} className={classes.navBar}>
       <Hidden mdUp>
@@ -29,4 +31,7 @@ export default function Navigation() {
       </Hidden>
     </AppBar>
   );
-}
+};
+
+//Got rid of withRouter
+export default withStyles(useStyles)(Navigation);

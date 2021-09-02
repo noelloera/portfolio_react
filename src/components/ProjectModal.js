@@ -1,51 +1,13 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 import { Modal, Grid, Typography, Button } from "@material-ui/core";
-const useStyles = makeStyles((theme) => ({
-  onHover: {
-    height: "100%",
-  },
-  allTechnologies: {
-    display: "flex",
-    justifyContent: "center",
-  },
-  technologies: {
-    height: "1em",
-    padding: "1em",
-  },
-  coverContainer: {
-    height: "300px",
-  },
-  coverImage: {
-    height: "auto",
-    maxWidth: "100%",
-  },
-  modalPreview: {
-    height: "200px",
-    width: "100%",
-  },
-  modalImage: {
-    maxWidth: "100%",
-    height: "auto",
-  },
-  paper: {
-    position: "absolute",
-    width: "700px",
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[10],
-    padding: theme.spacing(2, 4, 3),
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: 10,
-    outline: 0,
-    height: "90%",
-  },
-}));
+//Material UI styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
 
-export default function SimpleModal(props) {
-  const classes = useStyles();
+const ProjectModal = (props) => {
+  const { classes } = props;
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [open, setOpen] = React.useState(false);
   const [hovered, setHover] = React.useState(false);
@@ -59,7 +21,7 @@ export default function SimpleModal(props) {
   };
 
   const body = (
-    <Grid container className={classes.paper} direction="column" xs={12}>
+    <Grid container className={classes.modal} direction="column" xs={12}>
       <Grid item>
         <img className={classes.modalImage} src={props.coverSrc} />
       </Grid>
@@ -70,7 +32,7 @@ export default function SimpleModal(props) {
         <Typography>{props.fullDescription}</Typography>
       </Grid>
       <Grid item>
-        <div className={classes.allTechnologies}>
+        <div className={classes.modalPreviewTechnologies}>
           {props.technologies.map((technology) => {
             return (
               <img className={classes.technologies} src={technology.src}></img>
@@ -84,53 +46,51 @@ export default function SimpleModal(props) {
   );
 
   const onHover = (
-    <Grid xs={12} itemclassName={classes.onHover}>
-      <Fade>
-        <Grid container justifyContent="center" alignItems="center">
-          <Grid item xs={12}>
-            <Typography variant="h2" color="primary">
-              {props.name}
-            </Typography>
-            <Typography>{props.description}</Typography>
-            <div className={classes.allTechnologies}>
-              {props.technologies.map((technology) => {
-                return (
-                  <img
-                    className={classes.technologies}
-                    src={technology.src}
-                  ></img>
-                );
-              })}
-            </div>
-          </Grid>
-        </Grid>
-      </Fade>
+    <Grid container direction="column" justify="center" alignItems="center">
+      <Grid>
+        <Typography variant="h2" color="primary">
+          {props.name}
+        </Typography>
+      </Grid>
+      <Grid>
+        <Typography>{props.description}</Typography>
+      </Grid>
+      <Grid className={classes.modalPreviewTechnologies}>
+        {props.technologies.map((technology) => {
+          return (
+            <img className={classes.technologies} src={technology.src}></img>
+          );
+        })}
+      </Grid>
     </Grid>
   );
   const onLeave = (
-    <div className={classes.coverContainer}>
-      <img src={props.coverSrc} className={classes.coverImage}></img>
-    </div>
+    <Grid item container xs={12}>
+      <Fade>
+        <img src={props.coverSrc} className={classes.projectCoverImage}></img>
+      </Fade>
+    </Grid>
   );
 
   return (
-    <div>
-      <Grid
-        container
-        justifyContent="center"
-        alignContent="center"
-        className={classes.modalPreview}
-        type="button"
-        onClick={handleOpen}
-        onMouseEnter={() => {
-          setHover(true);
-        }}
-        onMouseLeave={() => {
-          setHover(false);
-        }}
-      >
-        {hovered ? onHover : onLeave}
-      </Grid>
+    <Grid
+      item
+      container
+      justify="center"
+      alignItems="center"
+      md={4}
+      xs={12}
+      type="button"
+      onClick={handleOpen}
+      className={classes.projectPreview}
+      onMouseEnter={() => {
+        setHover(true);
+      }}
+      onMouseLeave={() => {
+        setHover(false);
+      }}
+    >
+      {hovered ? <Fade>{onHover}</Fade> : onLeave}
       <Modal
         open={open}
         onClose={handleClose}
@@ -139,6 +99,10 @@ export default function SimpleModal(props) {
       >
         {body}
       </Modal>
-    </div>
+    </Grid>
   );
-}
+};
+ProjectModal.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+export default withStyles(useStyles)(ProjectModal);

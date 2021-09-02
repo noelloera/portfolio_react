@@ -1,27 +1,26 @@
-import { Grid, Typography, Paper } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
-import useStyles from "../helpers/useStyles";
 import ProjectModal from "./ProjectModal";
 import { projects } from "../assets/projects.js";
-export default function Portfolio() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const Portfolio = (props) => {
+  const { classes } = props;
   const renderedModals = () => {
     return projects.map((project) => {
       return (
-        <Grid item xs={12} md={4}>
-          <Paper className={classes.projectModals}>
-            <ProjectModal
-              coverSrc={project.src}
-              name={project.name}
-              technologies={project.technologies}
-              description={project.modal.description}
-              fullDescription={project.modal.fullDescription}
-              modalSrcs={project.modal.srcs}
-              url={project.modal.url}
-              gitUrl={project.modal.git}
-            />
-          </Paper>
-        </Grid>
+        <ProjectModal
+          coverSrc={project.src}
+          name={project.name}
+          technologies={project.technologies}
+          description={project.modal.description}
+          fullDescription={project.modal.fullDescription}
+          modalSrcs={project.modal.srcs}
+          url={project.modal.url}
+          gitUrl={project.modal.git}
+        />
       );
     });
   };
@@ -38,18 +37,15 @@ export default function Portfolio() {
         </Fade>
       </header>
       <Fade>
-        <div className={classes.projectContainer}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            {renderedModals()}
-          </Grid>
-        </div>
+        <Grid container md={12} className={classes.projectContainer}>
+          {renderedModals()}
+        </Grid>
       </Fade>
     </section>
   );
-}
-/*Will contain a mapping of multiple "Tiles.js" which will have their own database of recieving data*/
+};
+Portfolio.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+//Got rid of withRouter
+export default withStyles(useStyles)(Portfolio);

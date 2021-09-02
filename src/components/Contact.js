@@ -1,9 +1,11 @@
 import { Typography } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
-import useStyles from "../helpers/useStyles";
-
-export default function Portfolio() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const Contact = (props) => {
+  const { classes } = props;
   return (
     <section id="#CONTACT" className={classes.section}>
       <header className={classes.header}>
@@ -14,4 +16,9 @@ export default function Portfolio() {
       </header>
     </section>
   );
-}
+};
+Contact.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+//Got rid of withRouter
+export default withStyles(useStyles)(Contact);

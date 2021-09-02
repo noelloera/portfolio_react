@@ -1,12 +1,14 @@
 import React from "react";
 import { Hidden, Typography } from "@material-ui/core";
-import useStyles from "../helpers/useStyles.js";
 import { categories, frontTechs, backTechs } from "../assets/about.js";
 import Fade from "react-reveal/Fade";
 import theme from "../helpers/theme";
-
-export default function About() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const About = (props) => {
+  const { classes } = props;
   return (
     <section id="#ABOUT" className={classes.section}>
       <header className={classes.header}>
@@ -65,4 +67,9 @@ export default function About() {
       </Fade>
     </section>
   );
-}
+};
+About.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+//Got rid of withRouter
+export default withStyles(useStyles)(About);

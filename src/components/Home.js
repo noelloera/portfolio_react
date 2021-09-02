@@ -1,11 +1,13 @@
 import Canvas from "./Canvas.js";
-import useStyles from "../helpers/useStyles";
 import { Typography, Box } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-scroll";
-
-export default function Home() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const Home = (props) => {
+  const { classes } = props;
   return (
     <div id="#HOME" className={classes.home}>
       <Canvas />
@@ -36,4 +38,9 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+Home.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+//Got rid of withRouter
+export default withStyles(useStyles)(Home);

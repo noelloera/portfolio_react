@@ -9,9 +9,12 @@ import React from "react";
 import Drawer from "@material-ui/core/Drawer";
 import { Link } from "react-scroll";
 import MenuSharpIcon from "@material-ui/icons/MenuSharp";
-import useStyles from "../helpers/useStyles";
-export default function MobileDrawer() {
-  const classes = useStyles();
+//Material UI Styling
+import useStyles from "../helpers/useStyles.jsx";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+const MobileDrawer = (props) => {
+  const { classes } = props;
   const [state, setState] = React.useState({
     top: false,
   });
@@ -67,4 +70,9 @@ export default function MobileDrawer() {
       </Drawer>
     </div>
   );
-}
+};
+MobileDrawer.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+//Got rid of withRouter
+export default withStyles(useStyles)(MobileDrawer);
