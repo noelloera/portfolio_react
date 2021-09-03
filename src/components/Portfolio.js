@@ -19,7 +19,7 @@ const Portfolio = (props) => {
           fullDescription={project.modal.fullDescription}
           modalSrcs={project.modal.srcs}
           url={project.modal.url}
-          gitUrl={project.modal.git}
+          gitUrl={project.modal.gitUrl}
         />
       );
     });
@@ -37,7 +37,7 @@ const Portfolio = (props) => {
         </Fade>
       </header>
       <Fade>
-        <Grid container md={12} className={classes.projectContainer}>
+        <Grid container xs={12} className={classes.projectContainer}>
           {renderedModals()}
         </Grid>
       </Fade>

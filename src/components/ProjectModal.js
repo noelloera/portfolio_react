@@ -5,7 +5,10 @@ import { Modal, Grid, Typography, Button } from "@material-ui/core";
 import useStyles from "../helpers/useStyles.jsx";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-
+//Icons
+import ClearIcon from "@material-ui/icons/Clear";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LanguageIcon from "@material-ui/icons/Language";
 const ProjectModal = (props) => {
   const { classes } = props;
   // getModalStyle is not a pure function, we roll the style only on the first render
@@ -21,26 +24,53 @@ const ProjectModal = (props) => {
   };
 
   const body = (
-    <Grid container className={classes.modal} direction="column" xs={12}>
+    <Grid
+      item
+      container
+      alignContent="stretch"
+      className={classes.modal}
+      direction="column"
+      xs={12}
+    >
       <Grid item>
         <img className={classes.modalImage} src={props.coverSrc} />
       </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" id="simple-modal-title">
-          {props.name}
-        </Typography>
+      <Grid item className={classes.modalDescription}>
+        <Typography variant="subtitle1">{props.name}</Typography>
         <Typography>{props.fullDescription}</Typography>
       </Grid>
-      <Grid item>
-        <div className={classes.modalPreviewTechnologies}>
-          {props.technologies.map((technology) => {
-            return (
+      <Grid item className={classes.modalPreviewTechnologies}>
+        {props.technologies.map((technology) => {
+          return (
+            <div className={classes.technologyLayout}>
               <img className={classes.technologies} src={technology.src}></img>
-            );
-          })}
-        </div>
-        <Button>Site</Button>
-        <Button>Code</Button>
+              <p>{technology.title}</p>
+            </div>
+          );
+        })}
+      </Grid>
+      <Grid item container>
+        {" "}
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={() => {
+            window.open(props.url);
+          }}
+          startIcon={<LanguageIcon />}
+        >
+          Site
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            window.open(props.gitUrl);
+          }}
+          startIcon={<GitHubIcon />}
+        >
+          Code
+        </Button>
+        <Button onClick={handleClose} startIcon={<ClearIcon />} />
       </Grid>
     </Grid>
   );
@@ -48,7 +78,7 @@ const ProjectModal = (props) => {
   const onHover = (
     <Grid container direction="column" justify="center" alignItems="center">
       <Grid>
-        <Typography variant="h2" color="primary">
+        <Typography variant="subtitle1" color="primary">
           {props.name}
         </Typography>
       </Grid>
@@ -73,24 +103,27 @@ const ProjectModal = (props) => {
   );
 
   return (
-    <Grid
-      item
-      container
-      justify="center"
-      alignItems="center"
-      md={4}
-      xs={12}
-      type="button"
-      onClick={handleOpen}
-      className={classes.projectPreview}
-      onMouseEnter={() => {
-        setHover(true);
-      }}
-      onMouseLeave={() => {
-        setHover(false);
-      }}
-    >
-      {hovered ? <Fade>{onHover}</Fade> : onLeave}
+    <React.Fragment>
+      <Grid
+        item
+        container
+        justify="center"
+        alignItems="center"
+        sm={4}
+        xs={12}
+        type="button"
+        onClick={handleOpen}
+        onClose={handleClose}
+        className={classes.projectPreview}
+        onMouseEnter={() => {
+          setHover(true);
+        }}
+        onMouseLeave={() => {
+          setHover(false);
+        }}
+      >
+        {hovered ? <Fade>{onHover}</Fade> : onLeave}
+      </Grid>
       <Modal
         open={open}
         onClose={handleClose}
@@ -99,7 +132,7 @@ const ProjectModal = (props) => {
       >
         {body}
       </Modal>
-    </Grid>
+    </React.Fragment>
   );
 };
 ProjectModal.propTypes = {

@@ -137,11 +137,14 @@ const useStyles = () => ({
     textAlign: "center",
     margin: "1rem",
     display: "flex",
+    padding: "0 1rem",
     flexDirection: "column",
-    [theme.breakpoints.down("md")]: {
+    justifyContent: "center",
+    [theme.breakpoints.down("sm")]: {
       width: "3.5rem",
       height: "4rem",
       margin: "0.5rem",
+      padding: "0",
     },
   },
   techIcons: {
@@ -177,7 +180,10 @@ const useStyles = () => ({
 
   modalPreviewTechnologies: {
     display: "flex",
-    justifyContent: "center",
+  },
+  technologyLayout: {
+    display: "flex",
+    alignItems: "center",
   },
   technologies: {
     height: "1em",
@@ -190,13 +196,10 @@ const useStyles = () => ({
     height: "auto",
     maxWidth: "100%",
   },
-  modalPreview: {
-    height: "200px",
-    width: "100%",
-  },
   modalImage: {
     maxWidth: "100%",
     height: "auto",
+    width: "100vw",
   },
   modal: {
     position: "absolute",
@@ -207,9 +210,14 @@ const useStyles = () => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    zIndex: 10,
+    zIndex: 100,
     outline: 0,
-    height: "90%",
+    height: "85vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "70vh",
+      width: "100vw",
+      padding: 0,
+    },
   },
 });
 

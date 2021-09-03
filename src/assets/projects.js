@@ -2,55 +2,57 @@
 import { frontTechs, backTechs } from "./about.js";
 import grocerylistscover from "../assets/images/grocerylistscover.png";
 import starvincover from "../assets/images/starvincover.png";
+import jmaudiovideocover from "../assets/images/jmaudiovideocover.png";
 export const projects = [
   {
     id: "1",
-    name: "Grocery Lists",
+    name: "grocery-lists",
     src: grocerylistscover,
-    technologies: [frontTechs[5], frontTechs[2], backTechs[1], backTechs[2]],
-    modal: {
-      description: "Grocery List Application",
-      fullDescription:
-        "Groceries is a free item and item list storing app that allows users to never forget to buy the things they need with access to their lists and items from anywhere.",
-      srcs: [],
-      url: "",
-      gitUrl: "",
-    },
-  },
-  {
-    id: "2",
-    name: "Starvin",
-    src: starvincover,
-    technologies: [frontTechs[5], frontTechs[2]],
-    modal: {
-      description: "Local Restaurant Search",
-      fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
-      src: [],
-      url: "",
-      gitUrl: "",
-    },
-  },
-  {
-    id: "3",
-    name: "Quote Keeps",
-    src: "quote keeps picture",
     technologies: [
-      frontTechs[0],
-      frontTechs[1],
+      frontTechs[5],
+      frontTechs[6],
       frontTechs[2],
       backTechs[1],
       backTechs[2],
     ],
     modal: {
-      description: "Favorite Quote Storing Application",
+      description: "Grocery List Application",
       fullDescription:
-        "Quote Keeps is a free app that allows users to login and add or edit their favorite stored quotes",
-      src: [],
-      url: "",
-      gitUrl: "",
+        "Grocery-Lists is a list and item storing app that helps you never forget to buy, or do the things they need to. Access your lists anywhere you need them with ease.",
+      srcs: [],
+      url: "https://www.grocery-lists.com/",
+      gitUrl: "https://github.com/noelloera/groceries",
     },
   },
+  {
+    id: "2",
+    name: "starvin'",
+    src: starvincover,
+    technologies: [frontTechs[1], frontTechs[5], frontTechs[2]],
+    modal: {
+      description: "Local Restaurant Search",
+      fullDescription:
+        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+      src: [],
+      url: "https://www.starvin.website/",
+      gitUrl: "https://github.com/noelloera/starvin",
+    },
+  },
+  {
+    id: "3",
+    name: "J&M Audio Video",
+    src: jmaudiovideocover,
+    technologies: [frontTechs[5], frontTechs[6], backTechs[0]],
+    modal: {
+      description: "Home Theater Installation Business",
+      fullDescription:
+        "El Paso, TX based business which offers professional Home Theater installation.",
+      src: [],
+      url: "https://www.jmaudiovideo.com/",
+      gitUrl: "https://github.com/noelloera/business_template_1",
+    },
+  },
+
   {
     id: "4",
     name: "Login",
@@ -95,20 +97,6 @@ export const projects = [
   },
   {
     id: "7",
-    name: "TV Pro Install",
-    src: "",
-    technologies: [frontTechs[5], frontTechs[6], backTechs[0]],
-    modal: {
-      description: "Home Theater Installation Business",
-      fullDescription:
-        "El Paso, TX based business which offers professional Home Theater installation.",
-      src: [],
-      url: "",
-      gitUrl: "",
-    },
-  },
-  {
-    id: "8",
     name: "Wanderlist",
     src: "",
     technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
@@ -116,6 +104,26 @@ export const projects = [
       description: "Travel Planning Application",
       fullDescription:
         "Displays useful travel information when inputing what travel destination is specified.",
+      src: [],
+      url: "",
+      gitUrl: "",
+    },
+  },
+  {
+    id: "8",
+    name: "Keeper of Quotes",
+    src: "quote keeps picture",
+    technologies: [
+      frontTechs[0],
+      frontTechs[1],
+      frontTechs[2],
+      backTechs[1],
+      backTechs[2],
+    ],
+    modal: {
+      description: "Favorite Quote Storing Application",
+      fullDescription:
+        "Quote Keeps is a free app that allows users to login and add or edit their favorite stored quotes",
       src: [],
       url: "",
       gitUrl: "",
