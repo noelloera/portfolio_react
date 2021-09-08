@@ -1,6 +1,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import { Modal, Grid, Typography, Button } from "@material-ui/core";
+import { Carousel } from "react-carousel-minimal";
 //Material UI styling
 import useStyles from "../helpers/useStyles.jsx";
 import PropTypes from "prop-types";
@@ -22,7 +23,7 @@ const ProjectModal = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-
+  const carouselData = [{ image: props.modalSrc }, { image: props.coverSrc }];
   const body = (
     <Grid
       item
@@ -32,8 +33,8 @@ const ProjectModal = (props) => {
       direction="column"
       xs={12}
     >
-      <Grid item>
-        <img className={classes.modalImage} src={props.coverSrc} />
+      <Grid items className={classes.carouselContainer}>
+        <Carousel automatic height="500px" width="100vh" data={carouselData} />
       </Grid>
       <Grid item className={classes.modalDescription}>
         <Typography variant="subtitle1">{props.name}</Typography>

@@ -17,7 +17,7 @@ const Portfolio = (props) => {
           technologies={project.technologies}
           description={project.modal.description}
           fullDescription={project.modal.fullDescription}
-          modalSrcs={project.modal.srcs}
+          modalSrc={project.modal.src}
           url={project.modal.url}
           gitUrl={project.modal.gitUrl}
         />

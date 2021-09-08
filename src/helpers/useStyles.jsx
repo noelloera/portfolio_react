@@ -177,7 +177,6 @@ const useStyles = () => ({
     maxWidth: "100%",
     height: "auto",
   },
-
   modalPreviewTechnologies: {
     display: "flex",
   },
@@ -196,10 +195,9 @@ const useStyles = () => ({
     height: "auto",
     maxWidth: "100%",
   },
-  modalImage: {
-    maxWidth: "100%",
+  carouselContainer: {
     height: "auto",
-    width: "100vw",
+    maxWidth: "100%",
   },
   modal: {
     position: "absolute",
@@ -213,9 +211,10 @@ const useStyles = () => ({
     zIndex: 100,
     outline: 0,
     height: "85vh",
+    maxHeight: "800px",
     [theme.breakpoints.down("xs")]: {
       height: "70vh",
-      width: "100vw",
+      width: "100%",
       padding: 0,
     },
   },

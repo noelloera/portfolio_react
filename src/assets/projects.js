@@ -1,13 +1,17 @@
 //create renering of app on stock photos
 import { frontTechs, backTechs } from "./about.js";
-import grocerylistscover from "../assets/images/grocerylistscover.png";
-import starvincover from "../assets/images/starvincover.png";
-import jmaudiovideocover from "../assets/images/jmaudiovideocover.png";
+import grocerylist1 from "../assets/images/projectImages/grocerylists1.png";
+import grocerylist2 from "../assets/images/projectImages/grocerylists2.png";
+import starvin1 from "../assets/images/projectImages/starvin1.png";
+import starvin2 from "../assets/images/projectImages/starvin2.png";
+import jmaudiovideo1 from "../assets/images/projectImages/jmaudiovideo1.png";
+import jmaudiovideo2 from "../assets/images/projectImages/jmaudiovideo2.png";
+
 export const projects = [
   {
     id: "1",
     name: "grocery-lists",
-    src: grocerylistscover,
+    src: grocerylist1,
     technologies: [
       frontTechs[5],
       frontTechs[6],
@@ -19,7 +23,7 @@ export const projects = [
       description: "Grocery List Application",
       fullDescription:
         "Grocery-Lists is a list and item storing app that helps you never forget to buy, or do the things they need to. Access your lists anywhere you need them with ease.",
-      srcs: [],
+      src: grocerylist2,
       url: "https://www.grocery-lists.com/",
       gitUrl: "https://github.com/noelloera/groceries",
     },
@@ -27,13 +31,13 @@ export const projects = [
   {
     id: "2",
     name: "starvin'",
-    src: starvincover,
+    src: starvin1,
     technologies: [frontTechs[1], frontTechs[5], frontTechs[2]],
     modal: {
       description: "Local Restaurant Search",
       fullDescription:
         "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
-      src: [],
+      src: starvin2,
       url: "https://www.starvin.website/",
       gitUrl: "https://github.com/noelloera/starvin",
     },
@@ -41,18 +45,18 @@ export const projects = [
   {
     id: "3",
     name: "J&M Audio Video",
-    src: jmaudiovideocover,
+    src: jmaudiovideo1,
     technologies: [frontTechs[5], frontTechs[6], backTechs[0]],
     modal: {
       description: "Home Theater Installation Business",
       fullDescription:
         "El Paso, TX based business which offers professional Home Theater installation.",
-      src: [],
+      src: jmaudiovideo2,
       url: "https://www.jmaudiovideo.com/",
       gitUrl: "https://github.com/noelloera/business_template_1",
     },
   },
-
+  /*
   {
     id: "4",
     name: "Login",
@@ -66,7 +70,7 @@ export const projects = [
       url: "",
       gitUrl: "",
     },
-  },
+  },*/
   {
     id: "5",
     name: "Authenticate",
@@ -80,7 +84,7 @@ export const projects = [
       url: "",
       gitUrl: "",
     },
-  },
+  } /*
   {
     id: "6",
     name: "PlaylistMakr",
@@ -108,7 +112,7 @@ export const projects = [
       url: "",
       gitUrl: "",
     },
-  },
+  },*/,
   {
     id: "8",
     name: "Keeper of Quotes",
