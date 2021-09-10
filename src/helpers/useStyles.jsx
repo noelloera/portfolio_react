@@ -177,16 +177,27 @@ const useStyles = () => ({
     maxWidth: "100%",
     height: "auto",
   },
-  modalPreviewTechnologies: {
+  modalTechnologies: {
     display: "flex",
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      width: "80%",
+    },
   },
-  technologyLayout: {
+  modalTechnology: {
     display: "flex",
     alignItems: "center",
+    flexWrap: "wrap",
+    margin: "auto",
   },
-  technologies: {
+  techImg: {
     height: "1em",
     padding: "1em",
+  },
+  techName: {
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   coverContainer: {
     height: "300px",
@@ -199,6 +210,9 @@ const useStyles = () => ({
     height: "auto",
     maxWidth: "100%",
   },
+  modalDescription: {
+    width: "100%",
+  },
   modal: {
     position: "absolute",
     width: "700px",
@@ -208,14 +222,14 @@ const useStyles = () => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    zIndex: 100,
+    zIndex: 1,
     outline: 0,
-    height: "85vh",
-    maxHeight: "800px",
+    minHeight: "550px",
+    overflow: "hidden",
     [theme.breakpoints.down("xs")]: {
-      height: "70vh",
       width: "100%",
-      padding: 0,
+      padding: theme.spacing(1, 2, 2),
+      minHeight: "450px",
     },
   },
 });

@@ -1,6 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import { Modal, Grid, Typography, Button } from "@material-ui/core";
+import { Modal, Grid, Typography, Button, Divider } from "@material-ui/core";
 import { Carousel } from "react-carousel-minimal";
 //Material UI styling
 import useStyles from "../helpers/useStyles.jsx";
@@ -28,7 +28,8 @@ const ProjectModal = (props) => {
     <Grid
       item
       container
-      alignContent="stretch"
+      justifyContent="center"
+      alignContent="center"
       className={classes.modal}
       direction="column"
       xs={12}
@@ -38,20 +39,20 @@ const ProjectModal = (props) => {
       </Grid>
       <Grid item className={classes.modalDescription}>
         <Typography variant="subtitle1">{props.name}</Typography>
+        <Divider></Divider>
         <Typography>{props.fullDescription}</Typography>
       </Grid>
-      <Grid item className={classes.modalPreviewTechnologies}>
+      <Grid item className={classes.modalTechnologies}>
         {props.technologies.map((technology) => {
           return (
-            <div className={classes.technologyLayout}>
-              <img className={classes.technologies} src={technology.src}></img>
-              <p>{technology.title}</p>
+            <div className={classes.modalTechnology}>
+              <img className={classes.techImg} src={technology.src}></img>
+              <p className={classes.techName}>{technology.title}</p>
             </div>
           );
         })}
       </Grid>
-      <Grid item container>
-        {" "}
+      <Grid item container justifyContent="space-evenly">
         <Button
           color="primary"
           variant="contained"
@@ -86,11 +87,9 @@ const ProjectModal = (props) => {
       <Grid>
         <Typography>{props.description}</Typography>
       </Grid>
-      <Grid className={classes.modalPreviewTechnologies}>
+      <Grid className={classes.modalTechnology}>
         {props.technologies.map((technology) => {
-          return (
-            <img className={classes.technologies} src={technology.src}></img>
-          );
+          return <img className={classes.techImg} src={technology.src}></img>;
         })}
       </Grid>
     </Grid>
