@@ -6,7 +6,10 @@ import starvin1 from "../assets/images/projectImages/starvin1.png";
 import starvin2 from "../assets/images/projectImages/starvin2.png";
 import jmaudiovideo1 from "../assets/images/projectImages/jmaudiovideo1.png";
 import jmaudiovideo2 from "../assets/images/projectImages/jmaudiovideo2.png";
-
+import authenticate1 from "../assets/images/projectImages/authenticate1.png";
+import exploreorchore1 from "../assets/images/projectImages/exploreorchore1.png";
+import exploreorchore2 from "../assets/images/projectImages/exploreorchore2.png";
+import keeperofquotes1 from "../assets/images/projectImages/keeperofquotes1.png";
 export const projects = [
   {
     id: "1",
@@ -74,7 +77,7 @@ export const projects = [
   {
     id: "5",
     name: "Authenticate",
-    src: "Authenticate picture",
+    src: authenticate1,
     technologies: [backTechs[0], backTechs[1], backTechs[2]],
     modal: {
       description: "JWT Authentication Server",
@@ -114,9 +117,23 @@ export const projects = [
     },
   },*/,
   {
+    id: "9",
+    name: "Explore or Chore",
+    src: exploreorchore1,
+    technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
+    modal: {
+      description: "Guessing Game",
+      fullDescription:
+        "Behind one of these doors is a trick door which ends the game. Can you guess which 2 of the 3 doors are real?",
+      src: exploreorchore2,
+      url: "",
+      gitUrl: "",
+    },
+  },
+  {
     id: "8",
     name: "Keeper of Quotes",
-    src: "quote keeps picture",
+    src: keeperofquotes1,
     technologies: [
       frontTechs[0],
       frontTechs[1],
@@ -128,20 +145,6 @@ export const projects = [
       description: "Favorite Quote Storing Application",
       fullDescription:
         "Quote Keeps is a free app that allows users to login and add or edit their favorite stored quotes",
-      src: [],
-      url: "",
-      gitUrl: "",
-    },
-  },
-  {
-    id: "9",
-    name: "Grand Prize Door",
-    src: "",
-    technologies: [frontTechs[0], frontTechs[1], frontTechs[2]],
-    modal: {
-      description: "Guessing Game",
-      fullDescription:
-        "Behind one of these doors is a trick door which ends the game. Guess which 2 of the 3 doors are real doors to win.",
       src: [],
       url: "",
       gitUrl: "",

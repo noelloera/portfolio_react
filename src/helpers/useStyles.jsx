@@ -1,3 +1,4 @@
+import { BorderTop } from "@material-ui/icons";
 import theme from "./theme";
 const contrastColor = "#00b0c7";
 const useStyles = () => ({
@@ -67,7 +68,7 @@ const useStyles = () => ({
     cursor: "pointer",
     paddingLeft: "2.6rem",
   },
-  //About
+  //ABOUT
   section: {
     background: "#fff",
     height: "110vh",
@@ -153,18 +154,18 @@ const useStyles = () => ({
   //PORTFOLIO
   portfolioSection: {
     background: "#fff",
-    height: "180vh",
+    height: "130vh",
     textAlign: "center",
     margin: "auto",
-    overflow: "hidden",
-    [theme.breakpoints.down("md")]: {
-      height: "300vh",
+    [theme.breakpoints.down("xs")]: {
+      height: "235vh",
     },
   },
   projectContainer: {
     backgroundColor: "lightgray",
     maxWidth: "1200px",
     margin: "auto",
+    overflow: "scroll",
   },
   //Project
   projectPreview: {
@@ -230,6 +231,26 @@ const useStyles = () => ({
       width: "100%",
       padding: theme.spacing(1, 2, 2),
       minHeight: "450px",
+    },
+  },
+  portfolioTriangle: {
+    width: "0",
+    height: "0px",
+    borderLeft: "60px solid transparent",
+    borderRight: "60px solid transparent",
+    borderTop: "60px solid #ebebeb",
+    margin: "auto",
+  },
+  //CONTACT
+  contactSection: {
+    background: "#fff",
+    height: "110vh",
+    maxHeight: "1100px",
+    textAlign: "center",
+    margin: "auto",
+    overflow: "hidden",
+    [theme.breakpoints.down("md")]: {
+      height: "130vh",
     },
   },
 });

@@ -8,6 +8,7 @@ const Contact = (props) => {
   const { classes } = props;
   return (
     <section id="#CONTACT" className={classes.section}>
+      <div className={classes.portfolioTriangle}></div>
       <header className={classes.header}>
         <Fade left>
           <Typography variant="subtitle1">CONTACT</Typography>
