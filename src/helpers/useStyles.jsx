@@ -1,8 +1,11 @@
-import { BorderTop } from "@material-ui/icons";
 import theme from "./theme";
-const contrastColor = "#00b0c7";
+const pinkColor = "#e31b86";
+const blueColor = "#00b0c7";
+/*    <a href="https://www.freepik.com/psd/mockup"
+      >Mockup psd created by syifa5610 - www.freepik.com</a
+    >*/
 const useStyles = () => ({
-  //Home
+  //HOME
   home: {
     height: "100vh",
     zIndex: "0",
@@ -19,22 +22,25 @@ const useStyles = () => ({
   homeTypo: {
     display: "flex",
   },
-  homeButton: {
+  buttons: {
     height: "2.4rem",
     borderRadius: "0",
   },
+  //NAVIGATION
   navBar: {
+    background: "#1b242f",
     width: "100%",
     position: "sticky",
     top: "0",
-    height: "3.5rem",
+    height: "3.2rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderBottom: "4px solid " + contrastColor,
+    borderBottom: "4px solid " + blueColor,
     [theme.breakpoints.down("sm")]: {
       width: "100%",
-      margin: "auto",
+      padding: "0",
+      margin: "0 auto",
       textAlign: "center",
       position: "fixed",
       backgroundColor: "transparent",
@@ -42,14 +48,14 @@ const useStyles = () => ({
     },
   },
   mobileDrawer: {
-    background: "rgba(255, 54, 151, 0.6)",
-    borderBottom: "2px solid " + contrastColor,
+    background: "#1b242f",
+    borderBottom: "2px solid " + blueColor,
   },
-  //Mobile Drawer
+  //Mobile Navigation
   paper: {
-    background: "rgba(255, 54, 151, 0.95)",
+    background: "#1b242f",
     color: "white",
-    borderBottom: "2px solid " + contrastColor,
+    borderBottom: "2px solid " + blueColor,
   },
   drawerListItem: {
     height: "3em",
@@ -57,14 +63,14 @@ const useStyles = () => ({
   },
   toolbar: {
     overflow: "hidden",
-    maxWidth: "1280px",
+    maxWidth: "1210px",
     width: "95%",
   },
   link: {
     position: "initial",
     fontFamily: "montserrat",
-    fontWeight: "500",
-    "&:hover": { color: contrastColor },
+    fontWeight: "200",
+    "&:hover": { color: pinkColor },
     cursor: "pointer",
     paddingLeft: "2.6rem",
   },
@@ -76,8 +82,8 @@ const useStyles = () => ({
     textAlign: "center",
     margin: "auto",
     overflow: "hidden",
-    [theme.breakpoints.down("md")]: {
-      height: "130vh",
+    [theme.breakpoints.down("sm")]: {
+      height: "135vh",
     },
   },
   underline: {
@@ -88,9 +94,6 @@ const useStyles = () => ({
   header: {
     paddingTop: "5.4rem",
     paddingBottom: "4rem",
-    [theme.breakpoints.down("md")]: {
-      paddingTop: "5rem",
-    },
   },
   subheader: {
     paddingTop: "2.5rem",
@@ -105,21 +108,18 @@ const useStyles = () => ({
     flexWrap: "wrap",
   },
   category: {
-    width: "170px",
+    width: "200px",
   },
   categoryIcon: {
     paddingTop: "10px",
-    width: "80px",
+    width: "70px",
     padding: "15px",
-    background: contrastColor,
-    //borderBottom: "4px solid #ff3697",
+    background: pinkColor,
+    borderBottom: "3px solid " + blueColor,
   },
   //techIcons
   allTechnologies: {
-    paddingTop: "4.5rem",
-    [theme.breakpoints.down("md")]: {
-      paddingTop: "3rem",
-    },
+    paddingTop: "3rem",
   },
   row: {
     overflow: "hidden",
@@ -134,16 +134,14 @@ const useStyles = () => ({
   },
   technology: {
     width: "4rem",
-    height: "4rem",
     textAlign: "center",
     margin: "1rem",
     display: "flex",
     padding: "0 1rem",
     flexDirection: "column",
     justifyContent: "center",
-    [theme.breakpoints.down("sm")]: {
-      width: "3.5rem",
-      height: "4rem",
+    [theme.breakpoints.down("xs")]: {
+      width: "3rem",
       margin: "0.5rem",
       padding: "0",
     },
@@ -157,8 +155,10 @@ const useStyles = () => ({
     height: "130vh",
     textAlign: "center",
     margin: "auto",
+    maxHeight: "900px",
     [theme.breakpoints.down("xs")]: {
       height: "235vh",
+      maxHeight: "235vh",
     },
   },
   projectContainer: {
@@ -181,9 +181,7 @@ const useStyles = () => ({
   modalTechnologies: {
     display: "flex",
     width: "100%",
-    [theme.breakpoints.down("xs")]: {
-      width: "80%",
-    },
+    justifyContent: "space-between",
   },
   modalTechnology: {
     display: "flex",
@@ -233,25 +231,49 @@ const useStyles = () => ({
       minHeight: "450px",
     },
   },
+  modalDivider: {
+    margin: "0.3rem 0",
+  },
+  modalButtons: {
+    display: "flex",
+  },
   portfolioTriangle: {
     width: "0",
     height: "0px",
-    borderLeft: "60px solid transparent",
-    borderRight: "60px solid transparent",
-    borderTop: "60px solid #ebebeb",
+    borderLeft: "80px solid transparent",
+    borderRight: "80px solid transparent",
+    borderTop: "80px solid #ebebeb",
     margin: "auto",
   },
   //CONTACT
   contactSection: {
-    background: "#fff",
-    height: "110vh",
+    background: "#252934",
+    height: "90vh",
     maxHeight: "1100px",
     textAlign: "center",
     margin: "auto",
-    overflow: "hidden",
     [theme.breakpoints.down("md")]: {
-      height: "130vh",
+      height: "80vh",
     },
+  },
+  contactSubheader: {
+    color: blueColor,
+  },
+  contactForm: {
+    display: "flex",
+    alignItems: "center",
+    width: "400px",
+    flexDirection: "column",
+    margin: "auto",
+  },
+  contactField: {
+    width: "100%",
+    backgroundColor: "white",
+    color: "purple",
+  },
+  contactFooter: {
+    height: "30vh",
+    backgroundColor: "#1b242f",
   },
 });
 

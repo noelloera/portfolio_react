@@ -28,7 +28,7 @@ const Home = (props) => {
         </Box>
         <Link to="#ABOUT" smooth={true} duration={400}>
           <Button
-            className={classes.homeButton}
+            className={classes.buttons}
             variant="outlined"
             color="primary"
           >

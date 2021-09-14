@@ -39,7 +39,7 @@ const ProjectModal = (props) => {
       </Grid>
       <Grid item className={classes.modalDescription}>
         <Typography variant="subtitle1">{props.name}</Typography>
-        <Divider></Divider>
+        <Divider className={classes.modalDivider}></Divider>
         <Typography>{props.fullDescription}</Typography>
       </Grid>
       <Grid item className={classes.modalTechnologies}>
@@ -52,10 +52,16 @@ const ProjectModal = (props) => {
           );
         })}
       </Grid>
-      <Grid item container justifyContent="space-evenly">
+      <Grid
+        item
+        container
+        justifyContent="space-evenly"
+        className={classes.modalButtons}
+      >
         <Button
+          className={classes.buttons}
           color="primary"
-          variant="contained"
+          variant="outlined"
           onClick={() => {
             window.open(props.url);
           }}
@@ -64,7 +70,8 @@ const ProjectModal = (props) => {
           Site
         </Button>
         <Button
-          variant="contained"
+          className={classes.buttons}
+          variant="outlined"
           onClick={() => {
             window.open(props.gitUrl);
           }}

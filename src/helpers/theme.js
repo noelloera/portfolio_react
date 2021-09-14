@@ -51,7 +51,7 @@ const theme = createMuiTheme({
     //Try refactoring subtitle to use h4 attributes
     subtitle1: {
       fontWeight: "600",
-      fontSize: "1.8em",
+      fontSize: "2em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1.7em",
       },

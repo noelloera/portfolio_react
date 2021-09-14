@@ -41,7 +41,12 @@ const About = (props) => {
                   <div key={id} className={classes.technology}>
                     <img alt={title} src={src} className={classes.techIcons} />
                     <Hidden smDown>
-                      <Typography>{title}</Typography>
+                      <Typography
+                        style={{ fontSize: "0.9rem" }}
+                        variant="subtitle2"
+                      >
+                        {title}
+                      </Typography>
                     </Hidden>
                   </div>
                 </Fade>
@@ -56,7 +61,12 @@ const About = (props) => {
                   <div key={id} className={classes.technology}>
                     <img alt={title} src={src} className={classes.techIcons} />
                     <Hidden smDown>
-                      <Typography>{title}</Typography>
+                      <Typography
+                        style={{ fontSize: "0.9rem" }}
+                        variant="subtitle2"
+                      >
+                        {title}
+                      </Typography>
                     </Hidden>
                   </div>
                 </Fade>

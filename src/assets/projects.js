@@ -13,7 +13,7 @@ import keeperofquotes1 from "../assets/images/projectImages/keeperofquotes1.png"
 export const projects = [
   {
     id: "1",
-    name: "grocery-lists",
+    name: "Grocery Lists",
     src: grocerylist1,
     technologies: [
       frontTechs[5],
@@ -25,7 +25,7 @@ export const projects = [
     modal: {
       description: "Grocery List Application",
       fullDescription:
-        "Grocery-Lists is a list and item storing app that helps you never forget to buy, or do the things they need to. Access your lists anywhere you need them with ease.",
+        "Grocery-Lists is a list and item storing app that helps you never forget to buy, or do the things you need. Access your lists anywhere you need them with ease. Testing purposes (Email: email@emailprovider.com Password: 123456789!)",
       src: grocerylist2,
       url: "https://www.grocery-lists.com/",
       gitUrl: "https://github.com/noelloera/groceries",
@@ -33,13 +33,13 @@ export const projects = [
   },
   {
     id: "2",
-    name: "starvin'",
+    name: "Starvin'",
     src: starvin1,
     technologies: [frontTechs[1], frontTechs[5], frontTechs[2]],
     modal: {
       description: "Local Restaurant Search",
       fullDescription:
-        "Starvin is a platform where customers can discover local restaurants and provides results based on different search criteria.",
+        "Finding local businesses and restaurants is now a brease. Once the user enters their preferred search criteria the results are displayed in a simple card that contains the business' most important information. Satisfy that cravin',",
       src: starvin2,
       url: "https://www.starvin.website/",
       gitUrl: "https://github.com/noelloera/starvin",
