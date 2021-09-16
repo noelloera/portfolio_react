@@ -65,6 +65,11 @@ const useStyles = () => ({
     overflow: "hidden",
     maxWidth: "1210px",
     width: "95%",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  links: {
+    display: "flex",
   },
   link: {
     position: "initial",
@@ -272,8 +277,14 @@ const useStyles = () => ({
     color: "purple",
   },
   contactFooter: {
+    paddingTop: "3rem",
     height: "30vh",
     backgroundColor: "#1b242f",
+  },
+  copyright: {
+    paddingTop: "3rem",
+    display: "flex",
+    justifyContent: "center",
   },
 });
 
