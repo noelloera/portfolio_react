@@ -18,7 +18,7 @@ Portfolio-React uses React, MaterialUI, CSS, and JavaScript for front-end mobile
 
 1. Upon root request "/" the server feeds the client static file
 2. The static file renders the index.html file in the build directory
-3. All the components can be editted to display desired projects or technologies
+3. All the components can be edited to display desired projects or technologies
 4. projects.js and about.js can be customized to display the contents within
 
 ## Features
