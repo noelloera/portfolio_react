@@ -88,7 +88,9 @@ const useStyles = () => ({
     margin: "auto",
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
-      height: "135vh",
+      height: "170vh",
+      maxHeight: "none",
+
     },
   },
   underline: {
@@ -122,6 +124,12 @@ const useStyles = () => ({
     background: pinkColor,
     borderBottom: "3px solid " + blueColor,
   },
+  //aboutContainer
+  aboutContainer:{
+    maxWidth:"1280px",
+    margin:"auto",
+    padding: "1rem 3rem 1rem 3rem",
+  },
   //techIcons
   allTechnologies: {
     paddingTop: "3rem",
@@ -138,15 +146,14 @@ const useStyles = () => ({
     paddingBottom: "2rem",
   },
   technology: {
-    width: "4rem",
+    width: "2.5rem",
     textAlign: "center",
     margin: "1rem",
     display: "flex",
-    padding: "0 1rem",
     flexDirection: "column",
     justifyContent: "center",
     [theme.breakpoints.down("xs")]: {
-      width: "3rem",
+      width: "2rem",
       margin: "0.5rem",
       padding: "0",
     },
