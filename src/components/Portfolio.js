@@ -37,7 +37,7 @@ const Portfolio = (props) => {
         </Fade>
       </header>
       <Fade>
-        <Grid container xs={12} className={classes.projectContainer}>
+        <Grid container lg={12} className={classes.projectContainer}>
           {renderedModals()}
         </Grid>
       </Fade>

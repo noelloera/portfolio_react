@@ -82,13 +82,19 @@ const ProjectModal = (props) => {
   );
 
   const onHover = (
-    <Grid container direction="column" justify="center" alignItems="center">
-      <Grid>
+    <Grid
+      item
+      container
+      direction="column"
+      justify="center"
+      alignItems="center"
+    >
+      <Grid item>
         <Typography variant="subtitle1" color="primary">
           {props.name}
         </Typography>
       </Grid>
-      <Grid>
+      <Grid item>
         <Typography>{props.description}</Typography>
       </Grid>
       <Grid className={classes.modalTechnology}>

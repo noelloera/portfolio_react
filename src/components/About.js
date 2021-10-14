@@ -78,7 +78,9 @@ const About = (props) => {
                 className={classes.buttons}
                 startIcon={<AttachFileOutlinedIcon />}
                 onClick={() => {
-                  window.open("");
+                  window.open(
+                    "https://drive.google.com/uc?export=download&id=1ghtffidZdiyBX90rWixwfkWGvj35fLt7"
+                  );
                 }}
               >
                 Resume

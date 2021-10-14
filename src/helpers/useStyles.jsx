@@ -87,9 +87,8 @@ const useStyles = () => ({
     textAlign: "center",
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
-      height: "170vh",
+      height: "1700px",
       maxHeight: "none",
-
     },
   },
   underline: {
@@ -172,17 +171,19 @@ const useStyles = () => ({
     backgroundColor: "lightgray",
     maxWidth: "1200px",
     margin: "auto",
-    overflow: "scroll",
+    overflow: "hidden",
   },
   //Project
   projectPreview: {
-    height: "250px",
+    width:"auto",
+    maxHeight: "100%",
     overflow: "hidden",
     cursor: "pointer",
     textAlign: "center",
   },
   projectCoverImage: {
     maxWidth: "100%",
+    objectFit:"contain",
     height: "auto",
   },
   modalTechnologies: {
@@ -267,6 +268,7 @@ const useStyles = () => ({
     display: "flex",
     alignItems: "center",
     width: "400px",
+    maxWidth:"100%",
     flexDirection: "column",
     margin: "auto",
   },

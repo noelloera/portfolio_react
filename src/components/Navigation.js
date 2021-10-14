@@ -40,7 +40,15 @@ const Navigation = (props) => {
             >
               <GitHubIcon />
             </Button>
-            <Button color="secondary">
+            <Button
+              color="secondary"
+              title="Download Resume"
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/uc?export=download&id=1ghtffidZdiyBX90rWixwfkWGvj35fLt7"
+                );
+              }}
+            >
               <AttachFileOutlinedIcon />
             </Button>
           </div>
