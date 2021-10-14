@@ -52,33 +52,30 @@ const ProjectModal = (props) => {
           );
         })}
       </Grid>
-      <Grid
-        item
-        container
-        justifyContent="space-evenly"
-        className={classes.modalButtons}
-      >
-        <Button
-          className={classes.buttons}
-          color="primary"
-          variant="outlined"
-          onClick={() => {
-            window.open(props.url);
-          }}
-          startIcon={<LanguageIcon />}
-        >
-          Site
-        </Button>
-        <Button
-          className={classes.buttons}
-          variant="outlined"
-          onClick={() => {
-            window.open(props.gitUrl);
-          }}
-          startIcon={<GitHubIcon />}
-        >
-          Code
-        </Button>
+      <Grid container justifyContent="space-between" wrap="nowrap">
+        <Grid item container>
+          <Button
+            className={classes.buttons}
+            color="primary"
+            variant="outlined"
+            onClick={() => {
+              window.open(props.url);
+            }}
+            startIcon={<LanguageIcon />}
+          >
+            Site
+          </Button>
+          <Button
+            className={classes.buttons}
+            variant="outlined"
+            onClick={() => {
+              window.open(props.gitUrl);
+            }}
+            startIcon={<GitHubIcon />}
+          >
+            Code
+          </Button>
+        </Grid>
         <Button onClick={handleClose} startIcon={<ClearIcon />} />
       </Grid>
     </Grid>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Hidden, Typography, Grid, Button } from "@material-ui/core";
 import { categories, frontTechs, backTechs } from "../assets/about.js";
+import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 import theme from "../helpers/theme";
 //Material UI Styling
@@ -13,47 +14,80 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import AttachFileOutlinedIcon from "@material-ui/icons/AttachFileOutlined";
 //Images
 import noelLogo from "../assets/images/noelloeralogo.png";
-import { DeckRounded } from "@material-ui/icons";
 const About = (props) => {
   const { classes } = props;
   return (
     <section id="#ABOUT" className={classes.section}>
       <header className={classes.header}>
-        <Fade left duration={600}>
+        <Fade left>
           <Typography variant="subtitle1">ABOUT</Typography>
         </Fade>
-        <Fade left delay={500}>
+        <Zoom left>
           <div className={classes.underline}></div>
-        </Fade>
+        </Zoom>
       </header>
       <div className={classes.categories}>
         {categories.map(({ id, title, src, description }) => {
           return (
-            <Fade delay={id * 500}>
+            <Zoom left delay={id * 150}>
               <div key={id} className={classes.category}>
                 <img alt={title} src={src} className={classes.categoryIcon} />
                 <Typography variant="subtitle1">{title}</Typography>
                 <Typography variant="subtitle2">{description}</Typography>
               </div>
-            </Fade>
+            </Zoom>
           );
         })}
       </div>
       <Grid container className={classes.aboutContainer}>
-        <Grid item md={4} xs={12}>
-          <img src={noelLogo} />
-          <Typography>
-            Hi I'm Noel Loera passionate Fullstack developer based in Phoenix,
-            AZ currently working for Cognizant. These are the technologies I am
-            familiar with, and am always eager to expand my knowledge in the
-            ever changing field of technology.
-          </Typography>
-          <Button startIcon={<LinkedInIcon />}>LinkedIn</Button>
-          <Button startIcon={<GitHubIcon />}>GitHub</Button>
-          <Button startIcon={<AttachFileOutlinedIcon />}>Resume</Button>
+        <Grid item lg={1}></Grid>
+        <Grid item lg={4} md={12}>
+          <Fade left>
+            <Fade left>
+              <img src={noelLogo} />
+            </Fade>
+            <Typography variant="subtitle2">
+              Hello I am Noel Loera a full stack developer based in Phoenix, AZ.
+              Always eager to expand my knowledge in the ever changing field of
+              technology.
+            </Typography>
+            <Grid item container justifyContent="center">
+              <Button
+                variant="outlined"
+                className={classes.buttons}
+                startIcon={<LinkedInIcon />}
+                onClick={() => {
+                  window.open("https://www.linkedin.com/in/noelloera/");
+                }}
+              >
+                LinkedIn
+              </Button>
+              <Button
+                variant="outlined"
+                className={classes.buttons}
+                startIcon={<GitHubIcon />}
+                onClick={() => {
+                  window.open("https://github.com/noelloera");
+                }}
+              >
+                GitHub
+              </Button>
+              <Button
+                color="primary"
+                variant="outlined"
+                className={classes.buttons}
+                startIcon={<AttachFileOutlinedIcon />}
+                onClick={() => {
+                  window.open("");
+                }}
+              >
+                Resume
+              </Button>
+            </Grid>
+          </Fade>
         </Grid>
-        <Grid item md={8} xs={12}>
-          <Fade delay={3000}>
+        <Grid item lg={6} xs={12}>
+          <Fade right>
             <div className={classes.allTechnologies}>
               <div className={classes.row}>
                 {frontTechs.map(({ id, title, src }) => {
@@ -65,9 +99,9 @@ const About = (props) => {
                           src={src}
                           className={classes.techIcons}
                         />
-                        <Hidden smDown>
+                        <Hidden mdDown>
                           <Typography
-                            style={{ fontSize: "0.9rem" }}
+                            style={{ fontSize: "0.7rem" }}
                             variant="subtitle2"
                           >
                             {title}
@@ -89,9 +123,9 @@ const About = (props) => {
                           src={src}
                           className={classes.techIcons}
                         />
-                        <Hidden smDown>
+                        <Hidden mdDown>
                           <Typography
-                            style={{ fontSize: "0.9rem" }}
+                            style={{ fontSize: "0.7rem" }}
                             variant="subtitle2"
                           >
                             {title}
@@ -105,6 +139,7 @@ const About = (props) => {
             </div>
           </Fade>
         </Grid>
+        <Grid item lg={1}></Grid>
       </Grid>
     </section>
   );

@@ -94,7 +94,7 @@ export const frontTechs = [
 export const backTechs = [
   {
     id: "1",
-    title: "Node.JS",
+    title: "Node",
     src: nodejs,
   },
   {

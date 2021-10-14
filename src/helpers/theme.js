@@ -62,7 +62,7 @@ const theme = createMuiTheme({
     subtitle2: {
       fontWeight: "300",
       fontFamily: "Work Sans",
-      fontSize: "1.15em",
+      fontSize: "1em",
       [defaultTheme.breakpoints.down("md")]: {
         fontSize: "1em",
       },

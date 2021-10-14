@@ -85,7 +85,6 @@ const useStyles = () => ({
     height: "110vh",
     maxHeight: "1100px",
     textAlign: "center",
-    margin: "auto",
     overflow: "hidden",
     [theme.breakpoints.down("sm")]: {
       height: "170vh",
@@ -128,7 +127,7 @@ const useStyles = () => ({
   aboutContainer:{
     maxWidth:"1280px",
     margin:"auto",
-    padding: "1rem 3rem 1rem 3rem",
+    padding: "2.5rem 3rem",
   },
   //techIcons
   allTechnologies: {
@@ -137,17 +136,13 @@ const useStyles = () => ({
   row: {
     overflow: "hidden",
     margin: "auto",
-    width: "90%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     flexWrap: "wrap",
-    paddingBottom: "2rem",
   },
   technology: {
     width: "2.5rem",
-    textAlign: "center",
     margin: "1rem",
     display: "flex",
     flexDirection: "column",
@@ -245,9 +240,6 @@ const useStyles = () => ({
   },
   modalDivider: {
     margin: "0.3rem 0",
-  },
-  modalButtons: {
-    display: "flex",
   },
   portfolioTriangle: {
     width: "0",
