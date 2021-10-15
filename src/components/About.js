@@ -79,7 +79,7 @@ const About = (props) => {
                 startIcon={<AttachFileOutlinedIcon />}
                 onClick={() => {
                   window.open(
-                    "https://drive.google.com/uc?export=download&id=1ghtffidZdiyBX90rWixwfkWGvj35fLt7"
+                    "https://drive.google.com/uc?export=download&id=1Zdl5GbWKQ1XbvrUekTad79pZOPvFOWJm7FwntIojjT0"
                   );
                 }}
               >
