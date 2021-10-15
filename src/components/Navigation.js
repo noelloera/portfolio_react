@@ -45,7 +45,7 @@ const Navigation = (props) => {
               title="Download Resume"
               onClick={() => {
                 window.open(
-                  "https://drive.google.com/uc?export=download&id=1Zdl5GbWKQ1XbvrUekTad79pZOPvFOWJm7FwntIojjT0"
+                  "https://docs.google.com/document/d/1Zdl5GbWKQ1XbvrUekTad79pZOPvFOWJm7FwntIojjT0/edit?usp=sharing"
                 );
               }}
             >
