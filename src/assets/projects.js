@@ -84,8 +84,8 @@ export const projects = [
       fullDescription:
         "Reusable back-end Express.js and MongoDB server which uses JWT (JSON Web Token) encoding for user credentials.",
       src: [],
-      url: "",
-      gitUrl: "",
+      url: "https://github.com/noelloera/authenticate",
+      gitUrl: "https://github.com/noelloera/authenticate",
     },
   } /*
   {
@@ -126,8 +126,8 @@ export const projects = [
       fullDescription:
         "Behind one of these doors is a trick door which ends the game. Can you guess which 2 of the 3 doors are real?",
       src: exploreorchore2,
-      url: "",
-      gitUrl: "",
+      url: "https://exploreorchore.herokuapp.com/",
+      gitUrl: "https://github.com/noelloera/explore_or_chore",
     },
   },
   {
@@ -146,8 +146,8 @@ export const projects = [
       fullDescription:
         "Quote Keeps is a free app that allows users to login and add or edit their favorite stored quotes",
       src: [],
-      url: "",
-      gitUrl: "",
+      url: "https://github.com/noelloera/keeper_of_quotes",
+      gitUrl: "https://github.com/noelloera/keeper_of_quotes",
     },
   },
 ];
