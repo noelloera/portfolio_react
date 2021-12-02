@@ -7,30 +7,29 @@ import { withStyles } from "@material-ui/core/styles";
 import React from "react";
 //EmailJS
 import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_lntu7SP3AK6rjQNhf0ZZt");
+
 //MaterialUI Icons
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
 const Contact = (props) => {
   const { classes } = props;
   function sendEmail(e) {
     e.preventDefault();
-    console.log(API_KEY);
-    emailjs
-      .sendForm("service_i699rf3", "template_f4tnbq7", e.target, API_KEY)
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert(
-            "Successfully sent message! I will respond to you as quickly as possible."
-          );
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm("service_i699rf3", "template_f4tnbq7", e.target).then(
+      (result) => {
+        console.log(result.text);
+        alert(
+          "Successfully sent message! I will respond to you as quickly as possible."
+        );
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
     e.target.reset();
   }
   return (
