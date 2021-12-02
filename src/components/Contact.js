@@ -5,15 +5,14 @@ import useStyles from "../helpers/useStyles.jsx";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import React from "react";
-//EmailJS
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
-init("user_lntu7SP3AK6rjQNhf0ZZt");
-
 //MaterialUI Icons
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
+//EmailJS
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_lntu7SP3AK6rjQNhf0ZZt");
 
 const Contact = (props) => {
   const { classes } = props;
